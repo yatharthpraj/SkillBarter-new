@@ -1,0 +1,426 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SkillBarter</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="icon.png" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
+        </style>
+</head>
+<script>
+    function openSidebar(){
+        document.querySelector(".sidebar").style.display='block';
+    }
+    function closeSidebar(){
+        document.querySelector(".sidebar").style.display='none';
+        // document.querySelector(".sidebar").style.animation="close-sidebar 0.3s ease-out";
+    }
+    function openProfile(key){
+        if(key=='form'){
+            document.querySelector(".form-popup").style.display='block';
+        }
+        else{
+            document.querySelector(".info-"+key).style.display='block';
+        }
+    }
+    function closeProfile(key){
+        if(key=='form'){
+            document.querySelector(".form-popup").style.display='none';
+        } else if(key=='login'){
+            document.querySelector(".login-pop").style.display='none';
+        }
+        else{
+            document.querySelector(".info-"+key).style.display='none';
+        }
+    }
+</script>
+<body>
+    <nav id="nav">
+        <!-- <button class="hamburger" onclick="openSidebar()"><svg  xmlns="http://www.w3.org/2000/svg" height="1.8rem" viewBox="0 -960 960 960" width="1.8rem" fill="black"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg> -->
+        <!-- </button> -->
+        <ul class="left-items">    
+            <li class="other"><a href="#nav">Home</a></li>
+            <li class="other"><a href="#services">Services</a></li>
+            <li class="other"><a href="#expert-courses">Courses</a></li>
+            <li class="other"><a href="#why-choose-us">About </a></li>
+        </ul> 
+         <div class="center">
+             <h1>Skill<span>Barter</span></h1>
+         </div>
+        <ul class="right-items">
+            <li class="other"><a href="./Register/register.html" target="_blank" onclick="openProfile('form')" >Register</a></li>
+            <button class="login-btn" onclick="document.querySelector('.login-popup').style.display='block'">Login</button>
+        </ul>
+</nav>
+<div class="sidebar">
+    <div class="sidebar-header">
+        <img src="./Assets/SkillBarter_prev_ui.png" alt="">
+        <button onclick="closeSidebar()">
+            <svg xmlns="http://www.w3.org/2000/svg" height="30px" viewBox="0 -960 960 960" width="30px" fill="#000000"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg>
+        </button>
+    </div>
+    <div class="sidebar-links">
+        <ul>
+            <li><svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px" fill="#000000"><path d="M264-216h96v-240h240v240h96v-348L480-726 264-564v348Zm-72 72v-456l288-216 288 216v456H528v-240h-96v240H192Zm288-327Z"/></svg><a href="#nav">Home</a></li>
+            <li>
+                <svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px" fill="#000000"><path d="M480-216q48.67 0 83.34-35Q598-286 600-336v-192q2-50-33.5-85t-86-35q-50.5 0-85 35T360-528v192q-1 50 34 85t86 35Zm-72-120h144v-72H408v72Zm0-120h144v-72H408v72Zm72 26Zm0 286q-60 0-109-32.5T302-264H192v-72h96v-60h-96v-72h96v-60h-96v-72h110q8-26 25.8-47.09Q345.6-668.18 369-684l-81-81 51-51 101 100q19.86-5 40.43-5t40.57 5l100-100 51 51-81 81q23 16 40 37t27 47h110v72h-96v60h96v72h-96v60h96v72H658q-20 55-69 87.5T480-144Z"/></svg><a href="#">Issues</a></li>
+            <li>
+                <svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px" fill="#000000"><path d="M264-96v-175q-57-48-88.5-115.57T144-529q0-139.58 98.29-237.29Q340.58-864 481-864q109 0 196 58.5T792-653l66 223q5 17.48-5.5 31.74Q842-384 824-384h-56v120q0 29.7-21.15 50.85Q725.7-192 696-192h-96v96h-72v-168h168v-192h80l-52-173q-22-72-89.5-117.5T481-792q-111 0-188 76.63T216-529q0 58.93 25 111.96Q266-364 311-326l25 22v208h-72Zm232-348Zm-16 108q17 0 27.5-11.1 10.5-11.09 10.5-27.5 0-16.4-10.5-27.4T480-413q-17 0-27.5 10.92Q442-391.15 442-375q0 16.58 10.5 27.79T480-336Zm-29-122h58q0-30 7-45.5t30-35.5q23-21 34-40.5t11-42.5q0-41.16-32-69.58T482-720q-39 0-69.5 21.5T370-640l52 22q6.67-21.1 23.35-34.05Q462.02-665 482.04-665q20.96 0 35.46 13.5T532-618q0 20-14.5 34.5T488-555q-22 21-29.5 40.5T451-458Z"/></svg><a href="#card-container">About Us</a></li>
+            <li>
+                <svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px" fill="#000000"><path d="M384-480q-60 0-102-42t-42-102q0-60 42-102t102-42q60 0 102 42t42 102q0 60-42 102t-102 42ZM96-192v-92q0-26 12.5-47.5T143-366q55-32 116-49t125-17q11 0 20.5.5T425-430q-7 17-10.5 35t-5.5 36l-25-1q-54 0-106 14t-99 42q-4.95 2.94-7.98 8.24Q168-290.47 168-284v20h251q4.85 18.63 12.92 36.81Q440-209 451-192H96Zm543 48-12-56q-14-5-26.5-12T577-228l-55 17-32-55 41-40q-4-14-3.5-29t3.5-29l-41-39 32-56 54 16q11-10 24-17.5t27-11.5l13-56h64l13 56q14 5 27 12t24 17l54-15 32 55-40 38q2 15 2 30.05 0 15.06-3 28.95l41 39-32 55-55-16q-11 9-23.5 16.5T717-200l-14 56h-64Zm33.21-120Q702-264 723-285.21t21-51Q744-366 722.79-387t-51-21Q642-408 621-386.79t-21 51Q600-306 621.21-285t51 21Zm-288-288Q414-552 435-573.21t21-51Q456-654 434.79-675t-51-21Q354-696 333-674.79t-21 51Q312-594 333.21-573t51 21Zm-.21-72Zm35 360Z"/></svg><a href="#services">Services</a></li>
+            <li>
+                <svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px" fill="#000000"><path d="M96-192v-92q0-26 12.5-47.5T143-366q54-32 115-49t126-17q23 0 46.5 3t49.5 9l-61 62q-15-2-22-2h-13q-53 0-105 14t-100 42q-4.95 2.94-7.98 8.24Q168-290.47 168-284v20h286l71 72H96Zm530 0L491-328l50-51 85 85 187-186 51 50-238 238ZM384-480q-60 0-102-42t-42-102q0-60 42-102t102-42q60 0 102 42t42 102q0 60-42 102t-102 42Zm70 216Zm-69.79-288Q414-552 435-573.21t21-51Q456-654 434.79-675t-51-21Q354-696 333-674.79t-21 51Q312-594 333.21-573t51 21Zm-.21-72Z"/></svg><a href="#register" onclick="document.querySelector('.form-popup').style.display='block'">Register</a></li>
+           <div style="border-bottom: 1px solid grey; height: 1px; margin-left: -25px; margin-right: 5px; margin-top: 10px;" ></div>
+            <li>
+                <svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px" fill="#000000"><path d="m276-528 204-336 204 336H276ZM696-96q-70 0-119-49t-49-119q0-70 49-119t119-49q70 0 119 49t49 119q0 70-49 119T696-96Zm-552-24v-288h288v288H144Zm551.77-48Q736-168 764-195.77q28-27.78 28-68Q792-304 764.23-332q-27.78-28-68-28Q656-360 628-332.23q-28 27.78-28 68Q600-224 627.77-196q27.78 28 68 28ZM216-192h144v-144H216v144Zm188-408h152l-76-125-76 125Zm76 0ZM360-336Zm331 67Z"/></svg>
+            <a href="#">
+                <select name="category" id="category">
+                    <option value="Select category">Category:</option>
+                    <option value="Cricket">Cricket</option>
+                    <option value="Football">Football</option>
+                    <option value="Hockey">Hockey</option>
+                    <option value="Guitar">Guitar</option>
+                    <option value="Programming">Programming</option>
+                    <option value="Esports">Esports</option>
+                    <option value="Other">Other</option>
+                </select>
+                    </a></li>
+            <li>
+                <svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px" fill="#000000"><path d="M624-96v-80q-52-16-86-59.5T504-336h72q0 40 28 68t68 28h120q30 0 51 21t21 51v72H624Zm119.79-192Q714-288 693-309.21t-21-51Q672-390 693.21-411t51-21Q774-432 795-410.79t21 51Q816-330 794.79-309t-51 21ZM360-384q0-130 91-221t221-91v72q-100 0-170 69.86-70 69.85-70 170.14h-72Zm144 0q0-70 49.14-119T672-552v72q-40 0-68 28t-28 68h-72ZM96-528v-72q0-30 21-51t51-21h120q40 0 68-28t28-68h72q0 57-34 100.5T336-608v80H96Zm119.79-192Q186-720 165-741.21t-21-51Q144-822 165.21-843t51-21Q246-864 267-842.79t21 51Q288-762 266.79-741t-51 21Z"/></svg><a href="#">Contact</a></li>
+            <div style="border-bottom: 1px solid grey; height: 1px; margin-left: -25px; margin-right: 5px; margin-top: 10px;" ></div>
+               <li>
+            <svg xmlns="http://www.w3.org/2000/svg" style="display: inline;" height="20px" viewBox="0 -960 960 960" width="20px" fill="#000000" ><path d="M765-144 526-383q-30 22-65.79 34.5-35.79 12.5-76.18 12.5Q284-336 214-406t-70-170q0-100 70-170t170-70q100 0 170 70t70 170.03q0 40.39-12.5 76.18Q599-464 577-434l239 239-51 51ZM384-408q70 0 119-49t49-119q0-70-49-119t-119-49q-70 0-119 49t-49 119q0 70 49 119t119 49Z"/></svg>
+            <input type="search" name="search" id="search" placeholder="Search" style="width: 100%;">
+    </li>
+            <li style="display: flex; color: rgb(72, 71, 71); ">
+                <svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px" fill="rgb(72, 71, 71)"><path d="M216-144q-29.7 0-50.85-21.15Q144-186.3 144-216v-528q0-29.7 21.15-50.85Q186.3-816 216-816h264v72H216v528h264v72H216Zm432-168-51-51 81-81H384v-72h294l-81-81 51-51 168 168-168 168Z"/></svg><a href="#" style="color: rgb(72, 71, 71); font-size: 100%;">
+                Logout</a></li>
+        </ul>
+        <div class="sidebar-anchor">
+            <p>&copy;Skill Exchange.INC</p>
+            <a href="#">About</a>
+            <a href="#">Terms</a>
+            <a href="#">Privacy</a>
+            <a href="#">Security</a>
+            <a href="#">Status</a>
+            <a href="#">Blogs</a>
+        </div>
+    </div>
+</div>
+<section class="hero-section" id="hero-section">
+    <div class="main">
+        <h1 class="hero-heading">Find Your Perfect Tutor in Exchange of Your Skill</h1>
+        <p class="hero-para">Learn skills in exchange of teaching your skills.</p>
+        
+        <div class="search-bar">
+            <input type="text" placeholder="Type any skill here">
+            <input type="submit" value="Search">
+        </div>
+    </div>
+</section>
+<section class="why-choose-us" id="why-choose-us">
+    <div class="head-des">
+        <div class="leftBox">
+            <img src="./Assets/why-choose-us.gif" alt="whyChooseUs">
+        </div>
+        <div class="rightBox">
+            <h1>Discover the <span>Difference</span> with Us</h1>
+            <p>Join our platform for a unique, free skill exchange where you can learn new skills and share your expertise.</p>
+        </div>
+    </div>
+    <div class="number-container">
+        <span class="item item-1">
+      <h1>12000+</h1>
+      <p>Students Registered</p>  
+    </span>
+    <span class="item item-2">
+        <h1>3000+</h1>
+        <p>Students Assessed</p>  
+      </span>
+    <span class="item item-3">
+        <h1>140+</h1>
+        <p>Mentors</p>  
+    </span>
+    <span class="item item-4">
+        <h1>14+</h1>
+        <p>Specialized Courses</p>  
+    </span>
+    </div>
+</section>
+<!-- <section class="display-content">
+    <div class="info-1">
+        <button class="close-btn" onclick="closeProfile('1')"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#000000"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg></button>
+        <table >
+            <tr>
+                <td>
+                    <h4>Name:</h4><p>Siddharth Nayak</p><br>
+                    <h4>Skills:</h4><p>Full Stack Web</p><br>
+                    <h4>Interested In:</h4><p>I have an experience of 2+ years in the field of Full Stack Web Development, I really want to learn Table Tennis and would love to exchange skills.</p><br>
+                    <h4>Experience:</h4><p>2+ years</p><br>
+                </td>
+                <td>
+                    <img src="profile-1.jpg" alt="Profile image">
+                </td>
+            </tr>
+        </table>
+        <button onclick="openProfile('.profile-9')">Contact</button> 
+    </div>
+    <div class="info-2">
+        <button class="close-btn" onclick="closeProfile('2')"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#000000"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg></button>
+        <table>
+            <tr>
+                <td>
+                    <h4>Name:</h4><p>Atharv Atre</p><br>
+                    <h4>Skills:</h4><p>Basketball</p><br>
+                    <h4>Interested In:</h4><p>I have an experience of 5+ years in Basketball, I really want to learn Football and would love to exchange skills.</p><br>
+                    <h4>Experience:</h4><p>5+ years</p><br>
+                </td>
+                <td>
+                    <img src="profile-2.jpg" alt="Profile image">
+                </td>
+            </tr>
+        </table>
+        <button onclick="openProfile('.profile-9')">Contact</button> 
+    </div>
+    <div class="info-3">
+        <button class="close-btn" onclick="closeProfile('3')"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#000000"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg></button>
+        <table>
+            <tr>
+                <td>
+                    <h4>Name:</h4><p>Sneha Moonat</p><br>
+                    <h4>Skills:</h4><p>Python</p><br>
+                    <h4>Interested In:</h4><p>I have an experience of 4+ years in the field of programming with Python, I really want to learn Java and would love to exchange skills.</p><br>
+                    <h4>Experience:</h4><p>4+ years</p><br>
+                </td>
+                <td>
+                    <img src="profile-3.jpg" alt="Profile image">
+                </td>
+            </tr>
+        </table>
+        <button onclick="openProfile('.profile-9')">Contact</button> 
+    </div>  
+    <div class="info-4">
+        <button class="close-btn" onclick="closeProfile('4')"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#000000"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg></button>
+        <table>
+            <tr>
+                <td>
+                    <h4>Name:</h4><p>Yashraj Mukhate</p><br>
+                    <h4>Skills:</h4><p>Music Production</p><br>
+                    <h4>Interested In:</h4><p>I have an experience of 2+ years in the field of Music Production, I really want to learn Drumming and would love to exchange skills.</p><br>
+                    <h4>Experience:</h4><p>2+ years</p><br>
+                </td>
+                <td>
+                    <img src="profile-4.jpg" alt="Profile image">
+                </td>
+            </tr>
+        </table>
+        <button onclick="openProfile('.profile-9')">Contact</button> 
+    </div> 
+    <div class="info-5">
+        <button class="close-btn" onclick="closeProfile('5')"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#000000"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg></button>
+        <table>
+            <tr>
+                <td>
+                    <h4>Name:</h4><p>Samiksha Sood</p><br>
+                    <h4>Skills:</h4><p>Kathak</p><br>
+                    <h4>Interested In:</h4><p>I have an experience of 8+ years in Kathak, I really want to learn Kuchipudi and would love to exchange skills.</p><br>
+                    <h4>Experience:</h4><p>8+ years</p><br>
+                </td>
+                <td>
+                    <img src="profile-3.jpg" alt="Profile image">
+                </td>
+            </tr>
+        </table>
+        <button onclick="openProfile('.profile-9')">Contact</button> 
+    </div> 
+    <div class="info-6">
+        <button class="close-btn" onclick="closeProfile('6')"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#000000"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg></button>
+        <table>
+            <tr>
+                <td>
+                    <h4>Name:</h4><p>Khushi Raizada</p><br>
+                    <h4>Skills:</h4><p>Indian Cuisine</p><br>
+                    <h4>Interested In:</h4><p>I have an experience of 5+ years in cooking Indian Cuisine, I really want to learn French Cuisine and would love to exchange skills.</p><br>
+                    <h4>Experience:</h4><p>5+ years</p><br>
+                </td>
+                <td>
+                    <img src="profile-3.jpg" alt="Profile image">
+                </td>
+            </tr>
+        </table>
+        <button onclick="openProfile('.profile-9')">Contact</button> 
+    </div> 
+    <div class="info-7">
+        <button class="close-btn" onclick="closeProfile('7')"><svg xmlns="http://www.w3.org/2000/svg" height="40px" viewBox="0 -960 960 960" width="40px" fill="#000000"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg></button>
+        <table>
+            <tr>
+                <td>
+                    <h4>Name:</h4><p>Anjali Mehta</p><br>
+                    <h4>Skills:</h4><p>Spoken English</p><br>
+                    <h4>Interested In:</h4><p>I have an experience of 4+ years in speaking English, I really want to learn Tamil and would love to exchange skills.</p><br>
+                    <h4>Experience:</h4><p>4+ years</p><br>
+                </td>
+                <td>
+                    <img src="profile-7.jpg" alt="Profile image">
+                </td>
+            </tr>
+        </table>
+        <button onclick="openProfile('.profile-9')">Contact</button> 
+    </div>
+    <div class="info-8">
+        <button class="close-btn" onclick="closeProfile('8')"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#000000"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg></button>
+        <table>
+            <tr>
+                <td>
+                    <h4>Name:</h4><p>Siddharth Nayak</p><br>
+                    <h4>Skills:</h4><p>Full Stack Web</p><br>
+                    <h4>Interested In:</h4><p>I have an experience of 2+ years in the field of Full Stack Web Development, I really want to learn Table Tennis and would love to exchange skills.</p><br>
+                    <h4>Experience:</h4><p>2+ years</p><br>
+                </td>
+                <td>
+                    <img src="profile-8.jpg" alt="Profile image">
+                </td>
+            </tr>
+        </table>
+        <button onclick="openProfile('.profile-9')">Contact</button> 
+    </div>
+    
+</section>
+<h1 style="margin-left: 100px; font-size: 300%; margin-bottom: 10px; padding-top: 5px; text-decoration: underline;" id="services">Services</h1>
+<section class="profile-container" >
+    <div class=" profile profile-1" onclick="openProfile('1')" >
+        <table>
+            <tr>
+                <td>
+                    <h4>Name: </h4><p>Siddharth Nayak</p><br>
+                    <h4>Skills: </h4><p>Full Stack Web</p><br>
+                    <h4>Interested In: </h4><p>Table Tennis</p><br>
+                    <h4>Mode: </h4><p>Remote</p><br>
+                </td>
+                <td>
+                    <img src="profile-1.jpg" alt="Profile image">
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class=" profile profile-2" onclick="openProfile('2')">
+        <table>
+            <tr>
+                <td>
+                    <h4>Name: </h4><p>Atharv Atre</p><br>
+                    <h4>Skills: </h4><p>Basketball</p><br>
+                    <h4>Interested In: </h4><p>Football</p><br>
+                    <h4>Mode: </h4><p>Same City</p><br>
+                </td>
+                <td>
+                    <img src="profile-2.jpg" alt="Profile image">
+                </td>
+            </tr>
+        </table>
+    </div> 
+    
+    <div class=" profile profile-3" onclick="openProfile('3')">
+        <table>
+            <tr>
+                <td>
+                    <h4>Name: </h4><p>Sneha Moonat</p><br>
+                    <h4>Skills: </h4><p>Python</p><br>
+                    <h4>Interested In: </h4><p>Java</p><br>
+                    <h4>Mode: </h4><p>Remote</p><br>
+                </td>
+                <td>
+                    <img src="profile-3.jpg" alt="Profile image">
+                </td>
+            </tr>
+        </table>
+    </div> 
+    
+    <div class=" profile profile-4" onclick="openProfile('4')">
+        <table>
+            <tr>
+                <td>
+                    <h4>Name: </h4><p>Yashraj Mukhate</p><br>
+                    <h4>Skills: </h4><p>Music Production</p><br>
+                    <h4>Interested In: </h4><p>Drums</p><br>
+                    <h4>Mode: </h4><p>Remote</p><br>
+                </td>
+                <td>
+                    <img src="profile-4.jpg" alt="Profile image">
+                </td>
+            </tr>
+        </table>
+    </div> 
+    
+    <div class=" profile profile-5" onclick="openProfile('5')">
+        <table>
+            <tr>
+                <td>
+                    <h4>Name: </h4><p>Samiksha Sood</p><br>
+                    <h4>Skills: </h4><p>Kathak</p><br>
+                    <h4>Interested In: </h4><p>Kuchipudi</p><br>
+                    <h4>Mode: </h4><p>Same City</p><br>
+                </td>
+                <td>
+                    <img src="profile-3.jpg" alt="Profile image">
+                </td>
+            </tr>
+        </table>
+    </div> 
+    
+    <div class=" profile profile-6" onclick="openProfile('6')">
+        <table>
+            <tr>
+                <td>
+                    <h4>Name: </h4><p>Khushi Raizada</p><br>
+                    <h4>Skills: </h4><p>Indian Cuisine</p><br>
+                    <h4>Interested In: </h4><p>French Cuisine</p><br>
+                    <h4>Mode: </h4><p>Remote</p><br>
+                </td>
+                <td>
+                    <img src="profile-3.jpg" alt="Profile image">
+                </td>
+            </tr>
+        </table>
+    </div> 
+    
+    <div class=" profile profile-7" onclick="openProfile('7')">
+        <table>
+            <tr>
+                <td>
+                    <h4>Name: </h4><p>Anjali Mehta</p><br>
+                    <h4>Skills: </h4><p>Spoken English</p><br>
+                    <h4>Interested In: </h4><p>Tamil</p><br>
+                    <h4>Mode: </h4><p>Remote</p><br>
+                </td>
+                <td>
+                    <img src="profile-7.jpg" alt="Profile image">
+                </td>
+            </tr>
+        </table>
+    </div> 
+    
+    <div class=" profile profile-8" onclick="openProfile('8')">
+        <table>
+            <tr>
+                <td>
+                    <h4>Name: </h4><p>Siddharth Nayak</p><br>
+                    <h4>Skills: </h4><p>Full Stack Web</p><br>
+                    <h4>Interested In: </h4><p>Table Tennis</p><br>
+                    <h4>Mode: </h4><p>Remote</p><br>
+                </td>
+                <td>
+                    <img src="profile-8.jpg" alt="Profile image">
+                </td>
+            </tr>
+        </table>
+    </div> 
+    
+    <a class="view-more" onclick=" document.querySelector('.profile-5').style.display='block',document.querySelector('.profile-6').style.display='block',document.querySelector('.profile-7').style.display='block',document.querySelector('.profile-8').style.display='block',document.querySelector('.view-more').style.display='none',document.querySelector('.view-less').style.display='block'">View More</a>
+
+    <a class="view-less" style="display: none;" onclick=" document.querySelector('.profile-5').style.display='none',document.querySelector('.profile-6').style.display='none',document.querySelector('.profile-7').style.display='none',document.querySelector('.profile-8').style.display='none',document.querySelector('.view-less').style.display='none',document.querySelector('.view-more').style.display='block'">View Less</a>
+</section> -->
