@@ -47,8 +47,10 @@ nav{
     
     .hamburger{
         border: none;
-        background-color: initial;
         cursor: pointer;
+       
+        background-color: initial;
+       
     }
     .left-items {
 
@@ -66,8 +68,7 @@ nav{
                 text-decoration: none;
                 font-size: 1.3rem;
                 font-weight: 600;
-                /* color: black; */
-    color: white;
+                color: white;
 
             }
         } 
@@ -149,6 +150,7 @@ nav .left-items li :hover::after{
 
     display: none;
     color: black;
+    z-index: 1;
     height: 100vh;
     width: 25%;
     position: fixed;
@@ -157,7 +159,7 @@ nav .left-items li :hover::after{
     background-color: white;
     /* border: 2px solid rgb(219, 219, 219); */
     box-shadow: 2px 0 1px 0px rgb(219, 219, 219) ;
-    animation: sideBar 0.3s ease-in;
+    animation: sideBar 0.3s ease-in forwards;
     .sidebar-header{
         display: flex;
         /* align-items: center; */
@@ -262,10 +264,11 @@ nav .left-items li :hover::after{
     justify-content: center;
     background-color: var(--bg-color);
     color: white;
-    /* background: url(./Assets/Download\ premium\ vector\ of\ Pastel\ Memphis\ Facebook\ story\ background\ vector\ by\ Kappy\ about\ iphone\ wallpaper\,\ screen\ dot\ background\,\ story\,\ powerpoint\ background\,\ and\ wallpaper\ aesthetic\ powerpoints\ 2211697.jpg) no-repeat; */
+    background: url(./Assets/Download\ premium\ vector\ of\ Pastel\ Memphis\ Facebook\ story\ background\ vector\ by\ Kappy\ about\ iphone\ wallpaper\,\ screen\ dot\ background\,\ story\,\ powerpoint\ background\,\ and\ wallpaper\ aesthetic\ powerpoints\ 2211697.jpg) no-repeat;
     /* background: url(./Assets/HeroSectionImage2.png); */
     /* background: url(folded-blue-papers-with-office-stationeries-against-yellow-backdrop-with-space-writing-text.png); */
     background-size: cover;
+    background-clip: content-box;
     background-position:center;
     .main{
         
@@ -277,6 +280,7 @@ nav .left-items li :hover::after{
         position: absolute;
         top: 30%;
         width:55%;
+        /* height: 80%; */
         
         .hero-heading{
             font-size: 3vw;
