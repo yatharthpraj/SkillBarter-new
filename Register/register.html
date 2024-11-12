@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="register.css">
+    <title>Register</title>
+</head>
+<body>
+    <div class="container">
+        <!-- Form Section -->
+        <div class="form-section">
+            <h2>Sign Up For Free</h2>
+            <form action="#" method="get">
+                <div class="form-group">
+                    <label for="first-name">First Name</label>
+                    <input type="text" id="first-name" placeholder="Your First Name">
+                </div>
+                
+                <div class="form-group">
+                    <label for="last-name">Last Name</label>
+                    <input type="text" id="last-name" placeholder="Your Last Name">
+                </div>
+
+                <div class="form-group">
+                    <label for="email">E-Mail</label>
+                    <input type="email" id="email" placeholder="youremail@example.com">
+                </div>
+
+                <div class="form-group">
+                    <label for="dob">Date of Birth</label>
+                    <input type="date" id="dob">
+                </div>
+
+                <div class="form-group">
+                    <label for="profile-pic">Profile Picture</label>
+                    <input type="file" id="profile-pic" accept="image/*">
+                </div>
+
+                <div class="form-group">
+                    <label for="skills">Skills</label>
+                    <select id="skills">
+                        <option value="">Select your skill</option>
+                        <option value="programming">Programming</option>
+                        <option value="design">Design</option>
+                        <option value="marketing">Marketing</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="experience">Experience (Years)</label>
+                    <input type="number" name="experience" id="experience" min="0" max="100" value="0" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="interest">Interested In</label>
+                    <select id="interest">
+                        <option value="">Select your interest</option>
+                        <option value="full-time">Full-time</option>
+                        <option value="part-time">Part-time</option>
+                        <option value="internship">Internship</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" placeholder="********">
+                </div>
+
+                <button type="submit" class="submit-btn">Sign Up</button>
+                <p>Already have an Account?<a href="">Login</a></p>
+            </form>
+        </div>
+
+        <!-- Illustration Section -->
+        <div class="illustration-section">
+            <img src="https://i.pinimg.com/originals/9b/97/3b/9b973bfbaf32fb08052d6de52ff5c493.gif" alt="Illustration"> <!-- Replace with your illustration URL -->
+        </div>
+    </div>
+
+</body>
+</html>
