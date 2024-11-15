@@ -430,7 +430,7 @@ nav .left-items li :hover::after {
     justify-content: center;
     background-color: var(--bg-color);
     color: white;
-    background: url(./Assets/HeroSectionImg.jpg) no-repeat;
+    background: url(Assets/HeroSectionImg) no-repeat;
     background-size: cover;
     background-position: center;
 
@@ -500,16 +500,13 @@ nav .left-items li :hover::after {
 }
 
 .why-choose-us {
-    position: relative;
-    top: 7%;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
     /* background-color: beige; */
     min-height: 100%;
     width: 100%;
-    padding: 3rem 5rem 2rem 3rem;
+    padding: 6rem 5rem 2rem 3rem;
 
     .head-des {
         display: flex;
@@ -591,26 +588,23 @@ nav .left-items li :hover::after {
 }
 
 .services {
+    display: flex;
     min-height: 100%;
     width: 100%;
-    display: flex;
     background-color: #fbf6ea;
     justify-content: center;
-    position: relative;
-    /* top: 5.5rem; */
-    top: 13%;
+    align-items: center;
 
     .service-container {
         width: 90%;
-        height: 100%;
-        position: relative;
+        height: 90%;
         display: grid;
         place-content: center;
         grid-template-columns: 1fr 1fr 1fr;
-        grid-template-rows: 15rem 15rem;
+        grid-template-rows: 14rem 14rem;
         grid-template-areas: 'first first second'
-            'third fourth fifth';
-        padding: 2rem 2rem;
+        'third fourth fifth';
+        padding: 3rem 2rem 0rem 2rem;
         margin-top: 2rem;
         gap: 2rem;
     }
@@ -646,7 +640,7 @@ nav .left-items li :hover::after {
     background-color: #053d1a;
 
     h3 {
-        width: 45%;
+        width: 60%;
         font-size: 220%;
         line-height: 1.4;
         color: white;
@@ -697,15 +691,13 @@ nav .left-items li :hover::after {
 }
 
 .courses-section {
-    position: relative;
-    top: 13%;
+    display: flex;
     min-height: 100%;
     width: 100%;
-    display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: center; 
     padding: 5rem 2rem 1rem 2rem;
-    background-color: #111;
+    /* background-color: #111; */
     color: #fff;
     text-align: center;
 }
@@ -713,23 +705,21 @@ nav .left-items li :hover::after {
 .section-title {
     margin-bottom: 1.5rem;
     font-size: 2.5em;
-    color: #fff;
+    color: #111;
 }
 
 .courses-container {
     height: 80%;
     display: flex;
-    justify-content: center;
     align-items: center;
     gap: 30px;
-    flex-wrap: wrap;
 }
 
 .course-card {
     height: 90%;
     background-color: #fff;
     color: #111;
-    width: 270px;
+    width: 97%;
     padding: 10px;
     border-radius: 8px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
@@ -773,26 +763,24 @@ nav .left-items li :hover::after {
 }
 
 .how-it-works {
+    /* display: none; */
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 100%;
+    min-height: 100%;
     width: 100%;
-    position: relative;
-    top: 13%;
+    padding: 3rem 0rem;
 
     h1 {
-        text-shadow: 0px 3px 5px rgb(112, 112, 112);
-        /* margin: 50px; */
+        text-shadow: 2px 3px 1px #053d1a;
+        color: var(--btn-color);
         text-align: center;
         font-size: 300%;
-        /* font-weight: 2000; */
-
     }
 
     .container {
-        height: 80%;
+        height: 65%;
         width: 100%;
         display: flex;
         align-items: center;
@@ -809,11 +797,14 @@ nav .left-items li :hover::after {
             width: 30%;
 
             img {
-                height: 90%;
+                height: 60%;
                 width: 85%;
             }
 
             h3 {
+                color: #053d1a;
+                /* text-shadow:  -1px 1px 0 #053d1a, 1px 1px 0 #053d1a, 1px -1px 0 #053d1a, -1px -1px 0 #053d1a; */
+                text-decoration: underline var(--btn-color);
                 font-size: 150%;
             }
         }
@@ -821,9 +812,8 @@ nav .left-items li :hover::after {
 }
 
 footer {
-    position: relative;
-    top: 13%;
-    height: 100%;
+    /* display: none; */
+    min-height: 40%;
     width: 100%;
     /* background-color: #053d1a; */
     background-color: var(--bg-color);
@@ -833,7 +823,6 @@ footer {
         width: 100%;
         display: flex;
         align-items: center;
-        flex-direction: row;
         justify-content: space-evenly;
 
         * {
@@ -852,13 +841,14 @@ footer {
         }
 
         .section:first-child {
+            height: 80;
             width: 50%;
         }
 
         .section {
             /* border: 2px solid white; */
-            min-width: auto;
-            height: 100%;
+            width: 20%;
+            height: 80%;
 
             p {
                 line-height: 1.2;
@@ -909,6 +899,10 @@ footer {
     .why-choose-us .number-container .item {
         font-size: 120%;
     }
+
+    .courses-container{
+        justify-content: space-evenly;
+    }
 }
 
 /* to remove overlapping in navbar */
@@ -938,6 +932,8 @@ footer {
 }
 
 @media (min-width: 425px) and (max-width:768px) {
+    /* Navigation Bar */
+
     nav .left-items .other {
         display: none;
     }
@@ -949,6 +945,8 @@ footer {
     nav .center {
         left: 39%;
     }
+
+    /* Hero Section */
 
     .container .hero-section .main .search-bar {
         width: 40%;
@@ -987,9 +985,49 @@ footer {
     .container .why-choose-us .head-des .rightBox p {
         font-size: 97%;
     }
+
+    /* Services Section */
+
+    .services .service-container{
+        padding: 3rem 0rem 0rem 0rem;
+    }
+
+    .services .service-items:first-child h3{
+        width: 68%;
+    }
+    .services .service-items img{
+        margin-bottom: 0.6rem;
+    }
+    .services .service-items h3{
+        font-size: 1.2rem;
+        margin-bottom: 0.6rem;
+    }
+    .services .service-items p{
+        /* font-size: 0.8rem; */
+    }
+
+    /* Courses Section  */
+
+    /* .courses-section{
+        min-height: 100%;
+        justify-content: flex-start;
+    }
+
+    .courses-container{
+        height: 100%;
+    }
+
+    .course-card{
+        height: 22%;
+    } */
 }
 
 @media (min-width: 320px) and (max-width:425px) {
+    /* Navigation bar */
+
+    nav{
+        height: 4rem;
+    }
     nav .left-items {
         display: none;
     }
@@ -999,12 +1037,15 @@ footer {
     }
 
     nav .center {
+        top: 0.15rem;
         left: 1.5rem;
     }
 
     nav .hamburger {
         left: 90%;
     }
+
+    /* Hero Section */
 
     .container .hero-section .main h1 {
         font-size: 180%;
@@ -1018,9 +1059,12 @@ footer {
         width: 65%;
     }
 
+    /* Why Choose Us Section */
+
     .container .why-choose-us {
         top: 0;
         padding: 2rem;
+        row-gap: 3rem;
     }
 
     .why-choose-us .head-des {
@@ -1043,4 +1087,56 @@ footer {
         flex-direction: column;
         width: 100%;
     }
+
+    /* Services Section */
+
+    .services{
+        margin-top: 5rem;
+        min-height: fit-content;
+    }
+    .services .service-container{
+        min-height: fit-content;
+        width: 100%;
+        grid-template-columns: 1fr;
+        grid-template-rows: 14rem 14rem 14rem 14rem 14rem;
+        grid-template-areas:
+        'first'
+        'second'
+        'third'
+        'fourth'
+        'fifth';
+    }
+    .services .service-items:first-child h3{
+            width: 100%;
+            font-size: 161%;
+    }
+    .services .service-items:first-child a{
+        top: 0;
+        font-size: 100%;
+        padding: 0.5rem 0.8rem;
+    }
+
+    /* Courses Section  */
+
+    /* .courses-section{
+        min-height: auto;
+        padding: 2rem;
+    }
+
+    .courses-container{
+        flex-direction: column;
+        height: auto;
+        gap: 2rem;
+    }
+
+    .section-title{
+        font-size: 2rem;
+    }
+    .course-card{
+        height: auto;
+    }
+
+    .course-image{
+        height: auto;
+    } */
 }
