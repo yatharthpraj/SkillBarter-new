@@ -591,6 +591,7 @@ nav .left-items li :hover::after {
     min-height: 100%;
     width: 100%;
     padding: 6rem 5rem 2rem 3rem;
+    padding: 6rem 5rem 2rem 3rem;
 
     .head-des {
         display: flex;
@@ -673,18 +674,22 @@ nav .left-items li :hover::after {
 
 .services {
     display: flex;
+    display: flex;
     min-height: 100%;
     width: 100%;
     background-color: #fbf6ea;
     justify-content: center;
     align-items: center;
+    align-items: center;
 
     .service-container {
         width: 90%;
         height: 90%;
+        height: 90%;
         display: grid;
         place-content: center;
         grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 14rem 14rem;
         grid-template-rows: 14rem 14rem;
         grid-template-areas: 'first first second'
             'third fourth fifth';
@@ -723,6 +728,7 @@ nav .left-items li :hover::after {
     background-color: #053d1a;
 
     h3 {
+        width: 60%;
         width: 60%;
         font-size: 220%;
         line-height: 1.4;
@@ -775,6 +781,7 @@ nav .left-items li :hover::after {
 
 .courses-section {
     display: flex;
+    display: flex;
     min-height: 100%;
     width: 100%;
     flex-direction: column;
@@ -787,6 +794,7 @@ nav .left-items li :hover::after {
 .section-title {
     margin-bottom: 1.5rem;
     font-size: 2.5em;
+    color: #111;
     color: #111;
 }
 
@@ -845,12 +853,15 @@ nav .left-items li :hover::after {
 
 .how-it-works {
     /* display: none; */
+    /* display: none; */
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     min-height: 100%;
+    min-height: 100%;
     width: 100%;
+    padding: 3rem 0rem;
     padding: 3rem 0rem;
 
     h1 {
@@ -861,6 +872,7 @@ nav .left-items li :hover::after {
     }
 
     .container {
+        height: 65%;
         height: 65%;
         width: 100%;
         display: flex;
@@ -883,6 +895,9 @@ nav .left-items li :hover::after {
             }
 
             h3 {
+                color: #053d1a;
+                /* text-shadow:  -1px 1px 0 #053d1a, 1px 1px 0 #053d1a, 1px -1px 0 #053d1a, -1px -1px 0 #053d1a; */
+                text-decoration: underline var(--btn-color);
                 color: #053d1a;
                 /* text-shadow:  -1px 1px 0 #053d1a, 1px 1px 0 #053d1a, 1px -1px 0 #053d1a, -1px -1px 0 #053d1a; */
                 text-decoration: underline var(--btn-color);
@@ -925,6 +940,7 @@ footer {
         }
 
         .section:first-child {
+            height: 80;
             height: 80;
             width: 50%;
         }
@@ -1021,6 +1037,8 @@ footer {
 @media (min-width: 425px) and (max-width:768px) {
     /* Navigation Bar */
 
+    /* Navigation Bar */
+
     nav .left-items .other {
         display: none;
     }
@@ -1032,6 +1050,8 @@ footer {
     nav .center {
         left: 39%;
     }
+
+    /* Hero Section */
 
     /* Hero Section */
 
@@ -1129,12 +1149,15 @@ footer {
 
     nav .center {
         top: 0.15rem;
+        top: 0.15rem;
         left: 1.5rem;
     }
 
     nav .hamburger {
         left: 90%;
     }
+
+    /* Hero Section */
 
     /* Hero Section */
 
@@ -1152,9 +1175,12 @@ footer {
 
     /* Why Choose Us Section */
 
+    /* Why Choose Us Section */
+
     .container .why-choose-us {
         top: 0;
         padding: 2rem;
+        row-gap: 3rem;
         row-gap: 3rem;
     }
 
