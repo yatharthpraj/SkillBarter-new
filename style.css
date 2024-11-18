@@ -890,14 +890,11 @@ nav .left-items li :hover::after {
             width: 30%;
 
             img {
-                height: 75%;
+                height: 90%;
                 width: 85%;
             }
 
             h3 {
-                color: #053d1a;
-                /* text-shadow:  -1px 1px 0 #053d1a, 1px 1px 0 #053d1a, 1px -1px 0 #053d1a, -1px -1px 0 #053d1a; */
-                text-decoration: underline var(--btn-color);
                 color: #053d1a;
                 /* text-shadow:  -1px 1px 0 #053d1a, 1px 1px 0 #053d1a, 1px -1px 0 #053d1a, -1px -1px 0 #053d1a; */
                 text-decoration: underline var(--btn-color);
@@ -908,11 +905,12 @@ nav .left-items li :hover::after {
 }
 
 footer {
-    /* display: none; */
-    min-height: 60%;
+    position: relative;
+    top: 13%;
+    min-height: 50%;
     width: 100%;
     /* background-color: #053d1a; */
-    background-image: url(./Assets/FooterWave.jpeg);
+    background-image: url(./Assets/FooterWaves.jpeg);
     background-repeat: no-repeat;
     background-size: 100% 99% ;
     background-position: bottom;
@@ -941,13 +939,13 @@ footer {
 
         .section:first-child {
             height: 80;
-            height: 80;
             width: 50%;
         }
 
         .section {
-            width: 20%;
-            height: 80%;
+            /* border: 2px solid white; */
+            min-width: auto;
+            height: 100%;
 
             h2{
                 margin-bottom: 1rem;
@@ -1002,10 +1000,6 @@ footer {
     .why-choose-us .number-container .item {
         font-size: 120%;
     }
-
-    .courses-container {
-        justify-content: space-evenly;
-    }
 }
 
 /* to remove overlapping in navbar */
@@ -1037,8 +1031,6 @@ footer {
 @media (min-width: 425px) and (max-width:768px) {
     /* Navigation Bar */
 
-    /* Navigation Bar */
-
     nav .left-items .other {
         display: none;
     }
@@ -1050,8 +1042,6 @@ footer {
     nav .center {
         left: 39%;
     }
-
-    /* Hero Section */
 
     /* Hero Section */
 
@@ -1092,53 +1082,9 @@ footer {
     .container .why-choose-us .head-des .rightBox p {
         font-size: 97%;
     }
-
-    /* Services Section */
-
-    .services .service-container {
-        padding: 3rem 0rem 0rem 0rem;
-    }
-
-    .services .service-items:first-child h3 {
-        width: 68%;
-    }
-
-    .services .service-items img {
-        margin-bottom: 0.6rem;
-    }
-
-    .services .service-items h3 {
-        font-size: 1.2rem;
-        margin-bottom: 0.6rem;
-    }
-
-    /* .services .service-items p{
-        /* font-size: 0.8rem; *
-    } */
-
-    /* Courses Section  */
-
-    /* .courses-section{
-        min-height: 100%;
-        justify-content: flex-start;
-    }
-
-    .courses-container{
-        height: 100%;
-    }
-
-    .course-card{
-        height: 22%;
-    } */
 }
 
 @media (min-width: 320px) and (max-width:425px) {
-    /* Navigation bar */
-
-    nav {
-        height: 4rem;
-    }
-
     nav .left-items {
         display: none;
     }
@@ -1149,15 +1095,12 @@ footer {
 
     nav .center {
         top: 0.15rem;
-        top: 0.15rem;
         left: 1.5rem;
     }
 
     nav .hamburger {
         left: 90%;
     }
-
-    /* Hero Section */
 
     /* Hero Section */
 
@@ -1175,12 +1118,9 @@ footer {
 
     /* Why Choose Us Section */
 
-    /* Why Choose Us Section */
-
     .container .why-choose-us {
         top: 0;
         padding: 2rem;
-        row-gap: 3rem;
         row-gap: 3rem;
     }
 
@@ -1204,59 +1144,4 @@ footer {
         flex-direction: column;
         width: 100%;
     }
-
-    /* Services Section */
-
-    .services {
-        margin-top: 5rem;
-        min-height: fit-content;
-    }
-
-    .services .service-container {
-        min-height: fit-content;
-        width: 100%;
-        grid-template-columns: 1fr;
-        grid-template-rows: 14rem 14rem 14rem 14rem 14rem;
-        grid-template-areas:
-            'first'
-            'second'
-            'third'
-            'fourth'
-            'fifth';
-    }
-
-    .services .service-items:first-child h3 {
-        width: 100%;
-        font-size: 161%;
-    }
-
-    .services .service-items:first-child a {
-        top: 0;
-        font-size: 100%;
-        padding: 0.5rem 0.8rem;
-    }
-
-    /* Courses Section  */
-
-    /* .courses-section{
-        min-height: auto;
-        padding: 2rem;
-    }
-
-    .courses-container{
-        flex-direction: column;
-        height: auto;
-        gap: 2rem;
-    }
-
-    .section-title{
-        font-size: 2rem;
-    }
-    .course-card{
-        height: auto;
-    }
-
-    .course-image{
-        height: auto;
-    } */
 }
