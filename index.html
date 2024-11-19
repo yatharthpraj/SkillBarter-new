@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SkillBarter</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="shortcut icon" href="./Assets/icon.png" type="image/x-icon">
+    <link rel="shortcut icon" href="./Assets/Fav_icon.png" type="image/x-icon">
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
 
 </head>
@@ -279,17 +279,17 @@
             <h2 class="section-title">Popular Courses</h2>
             <div class="courses-container">
                 <div class="course-card">
-                    <img src="./Assets/course-image-1.jpg" alt="Course 1 Image" class="course-image">
+                    <div class="course-image-container"><img src="./Assets/course-image-1.jpg" alt="Course 1 Image" class="course-image" id="course-image-1"></div>
                     <h3 class="course-title">Learn Core Python: A Beginner's Guide to Python</h3>
                     <button class="view-course-btn">View Course</button>
                 </div>
                 <div class="course-card">
-                    <img src="./Assets/course-image-2.jpg" alt="Course 2 Image" class="course-image">
+                    <div class="course-image-container"><img src="./Assets/course-image-2.jpg" alt="Course 2 Image" class="course-image" id="course-image-2"></div>
                     <h3 class="course-title">Learn to Play an Instrument: Piano Lessons</h3>
                     <button class="view-course-btn">View Course</button>
                 </div>
                 <div class="course-card">
-                    <img src="./Assets/course-image-3.jpg" alt="Course 3 Image" class="course-image">
+                    <div class="course-image-container"><img src="./Assets/course-image-3.jpg" alt="Course 3 Image" class="course-image" id="course-image-3"></div>
                     <h3 class="course-title">Learn How to Make Your Own Game: Game Development</h3>
                     <button class="view-course-btn">View Course</button>
                 </div>
@@ -313,7 +313,7 @@
             </div>
         </section>
         <footer>
-            <div class="footer-container">
+            <div class="footer-container" id="footer">
                 <div class="section">
                     <div class="center">
                         <h1>Skill<span>Barter</span></h1>
@@ -342,14 +342,10 @@
                 </div>
                 <div class="section">
                     <h2>Get In Touch</h2>
-                    <pre><svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px" fill="#111  "><path d="M480.21-480Q510-480 531-501.21t21-51Q552-582 530.79-603t-51-21Q450-624 429-602.79t-21 51Q408-522 429.21-501t51 21ZM480-191q119-107 179.5-197T720-549q0-105-68.5-174T480-792q-103 0-171.5 69T240-549q0 71 60.5 161T480-191Zm0 95Q323.03-227.11 245.51-339.55 168-452 168-549q0-134 89-224.5T479.5-864q133.5 0 223 90.5T792-549q0 97-77 209T480-96Zm0-456Z"/></svg>   <span class="foot-dets">Lorem ipsum.</span></pre>
-                    <pre><svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px" fill="#111  "><path d="M763-145q-121-9-229.5-59.5T339-341q-86-86-135.5-194T144-764q-2-21 12.29-36.5Q170.57-816 192-816h136q17 0 29.5 10.5T374-779l24 106q2 13-1.5 25T385-628l-97 98q20 38 46 73t57.97 65.98Q422-361 456-335.5q34 25.5 72 45.5l99-96q8-8 20-11.5t25-1.5l107 23q17 5 27 17.5t10 29.5v136q0 21.43-16 35.71Q784-143 763-145ZM255-600l70-70-17.16-74H218q5 38 14 73.5t23 70.5Zm344 344q35.1 14.24 71.55 22.62Q707-225 744-220v-90l-75-16-70 70ZM255-600Zm344 344Z"/></svg> <span class="foot-dets">+91-1234567890</span> </pre>
+                    <pre><svg xmlns="http://www.w3.org/2000/svg" height="15px" viewBox="0 -960 960 960" width="15px" fill="#111  "><path d="M480.21-480Q510-480 531-501.21t21-51Q552-582 530.79-603t-51-21Q450-624 429-602.79t-21 51Q408-522 429.21-501t51 21ZM480-191q119-107 179.5-197T720-549q0-105-68.5-174T480-792q-103 0-171.5 69T240-549q0 71 60.5 161T480-191Zm0 95Q323.03-227.11 245.51-339.55 168-452 168-549q0-134 89-224.5T479.5-864q133.5 0 223 90.5T792-549q0 97-77 209T480-96Zm0-456Z"/></svg>   <span class="foot-dets">Lorem ipsum.</span></pre>
+                    <pre><svg xmlns="http://www.w3.org/2000/svg" height="15px" viewBox="0 -960 960 960" width="15px" fill="#111  "><path d="M763-145q-121-9-229.5-59.5T339-341q-86-86-135.5-194T144-764q-2-21 12.29-36.5Q170.57-816 192-816h136q17 0 29.5 10.5T374-779l24 106q2 13-1.5 25T385-628l-97 98q20 38 46 73t57.97 65.98Q422-361 456-335.5q34 25.5 72 45.5l99-96q8-8 20-11.5t25-1.5l107 23q17 5 27 17.5t10 29.5v136q0 21.43-16 35.71Q784-143 763-145ZM255-600l70-70-17.16-74H218q5 38 14 73.5t23 70.5Zm344 344q35.1 14.24 71.55 22.62Q707-225 744-220v-90l-75-16-70 70ZM255-600Zm344 344Z"/></svg> <span class="foot-dets">+91-1234567890</span> </pre>
 
-
-                    <!-- <pre>       &nbsp;+91-9876543210 </pre> -->
-
-
-                    <pre><svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px" fill="#111  "><path d="M168-192q-29.7 0-50.85-21.16Q96-234.32 96-264.04v-432.24Q96-726 117.15-747T168-768h624q29.7 0 50.85 21.16Q864-725.68 864-695.96v432.24Q864-234 842.85-213T792-192H168Zm312-240L168-611v347h624v-347L480-432Zm0-85 312-179H168l312 179Zm-312-94v-85 432-347Z"/></svg>  <span class="foot-dets">skillbarter@gmail.com</span> </pre>
+                    <pre><svg xmlns="http://www.w3.org/2000/svg" height="15px" viewBox="0 -960 960 960" width="15px" fill="#111  "><path d="M168-192q-29.7 0-50.85-21.16Q96-234.32 96-264.04v-432.24Q96-726 117.15-747T168-768h624q29.7 0 50.85 21.16Q864-725.68 864-695.96v432.24Q864-234 842.85-213T792-192H168Zm312-240L168-611v347h624v-347L480-432Zm0-85 312-179H168l312 179Zm-312-94v-85 432-347Z"/></svg>  <span class="foot-dets">skillbarter@gmail.com</span> </pre>
 
                     </pre>
                 </div>
