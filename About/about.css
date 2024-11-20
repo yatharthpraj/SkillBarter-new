@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Londrina+Solid:wght@100;300;400;900&family=Satisfy&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Londrina+Outline&family=Londrina+Shadow&family=Londrina+Solid:wght@100;300;400;900&family=Satisfy&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Kaushan+Script&family=Londrina+Outline&family=Londrina+Shadow&family=Londrina+Solid:wght@100;300;400;900&family=Satisfy&family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
 
 * {
     margin: 0;
@@ -10,7 +11,7 @@
 }
 
 :root {
-    --bg-color: #12364a;
+    --bg-color: #053d1a;
     --btn-color: #f7ad19;
 }
 
@@ -186,18 +187,18 @@ nav .left-items li :hover::after {
 }
 
 .hero-section{
-    height: 100%;
+    min-height: 100%;
     width: 100%;
     display: flex;
-    position: relative;
-    top: 13%;
     align-items: center;
     justify-content: center;
     .hero-image{
         height: 100%;
         width: 50%;
+        margin-top: 13rem;
+        padding-top: 3rem;
             img{
-                height: 100%;
+                height: 70%;
                 width: 90%;
             }
         }
@@ -220,15 +221,13 @@ nav .left-items li :hover::after {
                 display: flex;
                 align-items: center;
                 justify-content: center;
-                position: relative;
-                left: 1rem;
                 text-decoration: none;
                 color: white;
                 height: 2rem;
                 width: fit-content;
                 padding: 2px 4px;
                 background-color: var(--bg-color);
-                transform: skewX(-10deg);
+                /* transform: skewX(-10deg); */
                 box-shadow: 2px 2px 0px 2px var(--btn-color);
                
             }
@@ -236,7 +235,7 @@ nav .left-items li :hover::after {
 }
 
   .testimonial-section {
-    height: 100%;
+    min-height: 100%;
     width: 100%;
     text-align: center;
     padding: 2rem;
@@ -245,27 +244,26 @@ nav .left-items li :hover::after {
     align-items: center;
     flex-direction: column;
     background-color:#faf5e8;
-    /* background:  url(blob-scatter-haikei\ \(1\).png)  no-repeat;
-    background-size: cover; */
   }
   
   .testimonial-section h2 {
     font-size: 2rem;
-    margin-bottom: 0.5rem;
+    margin-bottom: 1rem;
   }
   
   .testimonial-section p {
     font-size: 1rem;
     color: #666;
-    margin-bottom: 2rem;
+    margin-bottom: 3rem;
   }
   
   .testimonials-grid {
-    height: 100%;
+    height: fit-content;
     width: 80%;
     display: grid;
     justify-content: center;
     align-items: center;
+    place-content: center;
     grid-template-columns: 25rem 25rem;
     grid-template-rows: 10rem 10rem;
     gap: 2rem;
@@ -302,24 +300,26 @@ nav .left-items li :hover::after {
     margin-top: 0.5rem;
   }
   
-footer {
+  footer {
     position: relative;
-    bottom: 0;
-    height: 100%;
+    top: 13%;
+    min-height: 50%;
     width: 100%;
     /* background-color: #053d1a; */
-    background-color: var(--bg-color);
+    background-image: url(../Assets/FooterWaves.jpeg);
+    background-repeat: no-repeat;
+    background-size: 100% 99% ;
+    background-position: bottom;
 
     .footer-container {
         height: 100%;
         width: 100%;
         display: flex;
         align-items: center;
-        flex-direction: row;
-        justify-content: space-evenly;
+        justify-content: space-around;
 
         * {
-            color: white;
+            color: black;
         }
 
         .all-socials {
@@ -334,6 +334,7 @@ footer {
         }
 
         .section:first-child {
+            height: 80;
             width: 50%;
         }
 
@@ -341,6 +342,10 @@ footer {
             /* border: 2px solid white; */
             min-width: auto;
             height: 100%;
+
+            h2{
+                margin-bottom: 1rem;
+            }
 
             p {
                 line-height: 1.2;
