@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="register.css">
     <title>Register</title>
 </head>
+
 <body>
     <div class="container">
         <!-- Form Section -->
@@ -13,14 +15,10 @@
             <h2>Sign Up For Free</h2>
             <form action="#" method="get">
                 <div class="form-group">
-                    <label for="first-name">First Name</label>
-                    <input type="text" id="first-name" placeholder="Your First Name">
+                    <label for="name">Full Name</label>
+                    <input type="text" id="name" placeholder="Full Name">
                 </div>
-                
-                <div class="form-group">
-                    <label for="last-name">Last Name</label>
-                    <input type="text" id="last-name" placeholder="Your Last Name">
-                </div>
+
 
                 <div class="form-group">
                     <label for="email">E-Mail</label>
@@ -28,44 +26,48 @@
                 </div>
 
                 <div class="form-group">
-                    <label for="dob">Date of Birth</label>
-                    <input type="date" id="dob">
-                </div>
-
-                <div class="form-group">
-                    <label for="profile-pic">Profile Picture</label>
-                    <input type="file" id="profile-pic" accept="image/*">
-                </div>
-
-                <div class="form-group">
-                    <label for="skills">Skills</label>
-                    <select id="skills">
-                        <option value="">Select your skill</option>
-                        <option value="programming">Programming</option>
-                        <option value="design">Design</option>
-                        <option value="marketing">Marketing</option>
-                    </select>
-                </div>
-
-                <div class="form-group">
-                    <label for="experience">Experience (Years)</label>
-                    <input type="number" name="experience" id="experience" min="0" max="100" value="0" required>
-                </div>
-
-                <div class="form-group">
-                    <label for="interest">Interested In</label>
-                    <select id="interest">
-                        <option value="">Select your interest</option>
-                        <option value="full-time">Full-time</option>
-                        <option value="part-time">Part-time</option>
-                        <option value="internship">Internship</option>
-                    </select>
-                </div>
-
-                <div class="form-group">
                     <label for="password">Password</label>
                     <input type="password" id="password" placeholder="********">
                 </div>
+                <a href="#" class="post-content-btn" onclick="document.querySelector('.post-content').style.display='block',document.querySelector('.post-content-btn').style.display='none'"> Start with your first post </a>
+                <div class="post-content">
+                    <div class="form-group">
+                        <label for="skills">Skills</label>
+                        <select id="skills">
+                            <option value="">Select your skill</option>
+                            <option value="programming">Programming</option>
+                            <option value="design">Design</option>
+                            <option value="marketing">Marketing</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="experience">Experience (Years)</label>
+                        <input type="number" name="experience" id="experience" min="0" max="100" value="0" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="interest">Interested In</label>
+                        <select id="interest">
+                            <option value="">Select your interest</option>
+                            <option value="full-time">Full-time</option>
+                            <option value="part-time">Part-time</option>
+                            <option value="internship">Internship</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="mode">Teaching mode:</label>
+                        <div class="teaching-modes">
+                            <input type="radio" name="mode" id="offline" value="Offline" required>
+                            <label for="offline">Offline</label>
+                            <input type="radio" name="mode" id="online" value="online" required>
+                            <label for="online">Online</label>
+                            <input type="radio" name="mode" id="both" value="both" required>
+                            <label for="both">Both</label>
+                        </div>
+                    </div>
+                </div>
+
 
                 <button type="submit" class="submit-btn">Sign Up</button>
                 <p>Already have an Account?<a href="">Login</a></p>
@@ -75,9 +77,10 @@
         <!-- Illustration Section -->
         <div class="illustration-section">
             <img src="registerImage.jpg" alt="Illustration">
-             <!-- Replace with your illustration URL -->
+            <!-- Replace with your illustration URL -->
         </div>
     </div>
 
 </body>
+
 </html>

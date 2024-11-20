@@ -49,6 +49,25 @@ body {
 
 .form-group {
     margin-bottom: 15px;
+    .post-content-btn a{
+        text-align: center;
+        color: blue;
+        text-decoration: underline;
+    }
+    .teaching-modes{
+        height: auto;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        column-gap: 0.9rem;
+        input{
+            height: fit-content;
+            width: fit-content;        
+            }
+       
+        
+    }
 }
 
 .form-group label {
@@ -73,6 +92,10 @@ body {
 
 .form-group input[type="number"] {
     width: 100%;
+}
+.post-content{
+    display: none;
+    margin: 1rem 0;
 }
 
 .submit-btn {
