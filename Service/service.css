@@ -201,7 +201,7 @@ nav .left-items li :hover::after {
     height: fit-content;
     justify-content: space-between;
     align-items: center;
-    padding: 0.5rem 2rem;
+    padding: 1rem 2rem;
     background-color: #e6f5ea;
     .filter-btn{
         height: fit-content;
@@ -332,7 +332,8 @@ nav .left-items li :hover::after {
     gap: 2rem;
     padding: 1rem;
     margin: 2rem 0;
-  }
+    
+}
   
   .slider-wrapper {
     overflow: hidden;
@@ -351,24 +352,50 @@ nav .left-items li :hover::after {
     display: flex;
     transition: transform 0.5s ease;
     gap: 2rem;
+    padding: 1rem;
     /* will-change: transform; */
   }
   
   .card {
     flex: 0 0 auto;
     /* min-width: calc(100% / 3); */
-    width: 50%;
+    width: 45%;
      /* Adjust based on visible cards */
-    height: 250px;
+    height: 300px;
     margin: 0 10px;
     background: white;
     border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 0px 6px 3px #ffaa004e;
     text-align: center;
-    padding: 20px;
+    padding: 1rem 1.5rem;
     font-size: 1.2rem;
-    border: 2px solid red;
-   
+    /* border: 2px solid red; */
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    row-gap: 0.8rem;
+    align-items: start;
+        *{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: fit-content;
+        width: fit-content;
+    }
+    .card-skill{
+        display: flex;
+        margin-bottom: 1rem;
+    }
+    .card-desc{
+        align-items: flex-start;
+        p{
+            justify-content: start;
+            display: flex;
+            width: fit-content;
+            height: min-content;
+        }
+    }
+
   }
   
   .slider-btn {
@@ -386,6 +413,7 @@ nav .left-items li :hover::after {
     position: absolute;
     top: 50%;
     z-index: 1;
+    background: linear-gradient(to top left, var(--bg-color), #0da547)
   }
   
   .prev-btn {

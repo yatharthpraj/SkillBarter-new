@@ -28,10 +28,10 @@ class CardSlider {
       const cardStyle = window.getComputedStyle(card);
       const cardWidth =
         card.offsetWidth +
-        parseInt(cardStyle.marginRight) +
-        parseInt(cardStyle.marginLeft); // Card width + spacing
+        parseInt(cardStyle.marginRight) + 
+        parseInt(cardStyle.marginLeft)+30; // Card width + spacing
   
-      this.slider.style.transform = `translateX(-${this.currentIndex * cardWidth}px)`; // Shift the slider
+      this.slider.style.transform = `translateX(-${this.currentIndex * cardWidth }px)`; // Shift the slider
     }
   
     // Handle resizing
