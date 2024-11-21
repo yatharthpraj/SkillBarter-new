@@ -187,9 +187,9 @@ nav .left-items li :hover::after {
 }
 
 .hero-section{
+    display: flex;
     min-height: 100%;
     width: 100%;
-    display: flex;
     align-items: center;
     justify-content: center;
     .hero-image{
@@ -235,11 +235,11 @@ nav .left-items li :hover::after {
 }
 
   .testimonial-section {
+    display: flex;
     min-height: 100%;
     width: 100%;
     text-align: center;
     padding: 2rem;
-    display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
@@ -270,7 +270,7 @@ nav .left-items li :hover::after {
   }
   
   .testimonial {
-    background-color: #eeeeee;
+    background-color: #E6F4EA;
     padding: 1rem;
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -375,5 +375,106 @@ nav .left-items li :hover::after {
             }
         }
 
+    }
+}
+
+/* MEDIA QUERIES */
+
+@media (min-width:768px) and (max-width:1024px) {
+    nav .center{
+        left: 48%;
+    }
+}
+@media (min-width:426px) and (max-width:768px) {
+    nav .left-items .other{
+        display: none;
+    }
+
+    nav .center{
+        left: 38%;
+    }
+
+    .testimonials-grid{
+        width: 100%;
+        grid-template-columns: 20rem 20rem;
+    }
+
+    .testimonial-section p{
+        margin-bottom: 2rem;
+    }
+}
+
+@media (min-width:320px) and (max-width:425px){
+    nav .left-items{
+        display: none;
+    }
+    nav .right-items{
+        display: none;
+    }
+    nav .hamburger{
+        left: 90%;
+    }
+    nav .center{
+        left: 5%;
+    }
+
+    .hero-section{
+        flex-direction: column;
+        min-height: fit-content;
+    }
+    .hero-section .hero-image{
+        margin-top: 8rem;
+        padding-top: 0;
+        height: 35%;
+        width: 80%;
+        display: flex;
+        justify-content: center;
+    }
+    .hero-section .hero-image img{
+        height: 85%;
+        width: 90%;
+    }
+    .hero-section .hero-content{
+        width: 100%;
+        padding: 0rem 2rem;
+        align-items: center;
+    }
+
+    .testimonial-section{
+        margin-top: 5rem;
+        min-height: fit-content;
+    }
+
+    .testimonials-grid{
+        align-items: normal;
+        grid-template-columns: 15rem;
+        grid-template-rows: 12rem 12rem 12rem 12rem;
+    }
+
+    .testimonial-section p{
+        margin-bottom: 2rem ;
+    }
+
+    .footer-container{
+        justify-content: center;
+        padding: 0rem 1rem;
+    }
+
+    footer .footer-container .section{
+        min-width: 42%;
+    }
+
+    .section h2{
+        font-size: 1.2rem;
+    }
+    .section ul{
+        font-size: 0.8rem;
+    }
+
+    .section pre span{
+        font-size: 0.9rem;
+    }
+    .section:first-child{
+        display: none;
     }
 }
