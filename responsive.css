@@ -1,0 +1,709 @@
+/* MEDIA QUERIES */
+
+@media (min-width:1025px) and (max-width:1440px) {
+    .container .hero-section .main .hero-heading {
+        font-size: 267%;
+    }
+
+    .container .hero-section .main .hero-para {
+        font-size: 1.4rem;
+    }
+
+    .container .hero-section .main a{
+        font-size: 120%;
+    }
+
+    .container .why-choose-us {
+        gap: 1rem;
+    }
+
+    .why-choose-us .head-des{
+        height: 70%;
+    }
+    .why-choose-us .head-des .leftBox img{
+        height: 90%;
+        width: 90%;
+    }
+
+    .why-choose-us .head-des .rightBox h1{
+        padding-top: 1.5rem;
+        font-size: 360%;
+        width: 95%;
+        margin-bottom: 1rem;
+    }
+
+    .why-choose-us .head-des .rightBox p{
+        font-size: 120%;
+    }
+
+    .why-choose-us .number-container{
+        font-size: 130%;
+    }
+}
+
+@media (min-width:768px) and (max-width:1024px) {
+
+    nav .center {
+        left: 50%;
+    }
+
+    nav{
+        min-height: 5.5rem;
+        top: 0rem;
+    }
+
+    .container .hero-section .main .content-papa {
+        gap: 3rem;
+    }
+
+    .container .hero-section .main .hero-content {
+        padding: 0rem 2rem;
+    }
+
+    .container .hero-section .main .hero-image {
+        margin-top: 0;
+    }
+
+    .container .why-choose-us {
+        gap: 0rem;
+        padding: 2rem 5rem 2rem 3rem;
+    }
+
+    .container .why-choose-us .head-des .rightBox p {
+        font-size: 100%;
+        width: 95%;
+    }
+
+    .why-choose-us .number-container .item {
+        font-size: 120%;
+    }
+
+    .course-title{
+        margin: 0;
+        padding: 0;
+    }
+}
+
+/* to remove overlapping in navbar */
+@media (min-width: 769px) and (max-width:994px) {
+    nav .left-items .other {
+        display: none;
+    }
+
+    nav .right-items {
+        right: 1rem;
+    }
+}
+
+/* to remove overlapping between 768 to 425 */
+@media (max-width:675px) {
+    nav .left-items {
+        display: none;
+    }
+
+    nav .center {
+        left: 39%;
+    }
+}
+
+@media (min-width: 426px) and (max-width:768px) {
+    /* Navigation Bar */
+
+    nav .left-items{
+        margin-right: 0;
+    }
+
+    nav .left-items .other{
+        display: none;
+    }
+
+    
+
+    nav .center {
+        left: 35%;
+    }
+
+    nav{
+        min-height: 5.5rem;
+        top: 0rem;
+    }
+
+    /* Hero Section */
+
+    .container .hero-section .main{
+        row-gap: 0;
+    }
+
+    .container .hero-section .main .content-papa{
+        height: 100%;
+        gap: 0rem;
+    }
+
+    .container .hero-section .main .content-papa img{
+        width: 100%;
+        height: 100%;
+        margin-top: 0;
+        padding: 2rem 1rem;
+    }
+
+    .container .hero-section .main .content-papa .hero-image{
+        height: 80%;
+        width: 75%;
+        margin-top: 0;
+    }
+
+    .container .hero-section .main .hero-content{
+        padding: 2rem 1.5rem 0rem 2em;
+        width: 100%;
+        gap: 0.5rem;
+    }
+
+    .container .hero-section .main .hero-content .hero-heading{
+        font-size: 190%;
+    }
+
+    .container .hero-section .main .hero-content .hero-para{
+        font-size: 1.1rem;
+    }
+
+
+    .container .why-choose-us .head-des .leftBox img {
+        margin-left: 0;
+        width: 24rem;
+        height: 17rem;
+    }
+
+    .container .why-choose-us {
+        padding: 6rem 3rem 2rem 1rem;
+    }
+
+    .why-choose-us .head-des {
+        column-gap: 5%;
+    }
+
+    .container .why-choose-us .head-des .rightBox h1 {
+        font-size: 264%;
+    }
+
+    .container .why-choose-us .head-des .rightBox {
+        width: 74%;
+    }
+
+    .why-choose-us .number-container .item:nth-child(2) {
+        display: none;
+    }
+
+    .why-choose-us .number-container {
+        width: 100%;
+        margin-top: 0;
+    }
+
+    .container .why-choose-us .head-des .rightBox p {
+        font-size: 97%;
+        width: 95%;
+    }
+
+    /* Services Section */
+
+    .services .service-container{
+        padding: 3rem 0rem 3rem 0rem;
+    }
+
+    .services .service-items:first-child h3{
+        width: 68%;
+    }
+    .services .service-items img{
+        margin-bottom: 0.6rem;
+    }
+    .services .service-items h3{
+        font-size: 1.2rem;
+        margin-bottom: 0.6rem;
+    }
+
+    /* Courses Section */
+
+    .courses-section{
+        margin-top: 3rem;
+        padding: 25px 15px;
+    }
+
+   .courses-container{
+        gap: 15px;
+   }
+
+   .course-card{
+        padding: 0rem 1rem;
+   }
+
+   #course-image-2{
+        height: 93%;
+   }
+
+   #course-image-3{
+        padding-top: 0.5rem;
+        height: 95%;
+   }
+
+   .course-title{
+        margin: 0;
+        padding: 0;
+        font-size: 1.2rem;
+   }
+
+   .view-course-btn{
+        margin-top: 0;
+        width: 70%;
+   }
+
+   .how-it-works .container .item img{
+        height: 80%;
+   }
+
+   .sidebar{
+        width: 35%;
+   }
+
+   .container .form-container .login-popup{
+    width: 60%;
+    } 
+}
+
+@media (min-width: 321px) and (max-width:425px) {
+    nav .left-items {
+        display: none;
+    }
+
+    nav .right-items .other{
+        display: none;
+    }
+
+    nav .right-items{
+        right: 1rem;
+    }
+
+    nav .center {
+        left: 6%;
+    }
+
+    nav{
+        min-height: 3rem;
+        top: 0rem;
+        padding-top: 0.5rem;
+    }
+
+    .form-container .login-popup{
+        width: 90%;
+        padding: 1.5rem;
+    }
+
+    /* Hero Section */
+
+    .container .hero-section .main .content-papa{
+        flex-direction: column-reverse;
+        gap: 1rem;
+        align-items: center;
+    }
+
+    .container .hero-section .main .content-papa img{
+        width: 100%;
+        height: 100%;
+        padding: 0rem 5%;
+    }
+
+    .container .hero-section .main .content-papa .hero-image{
+        height: 45%;
+        width: 80%;
+        margin-top: 0;
+    }
+
+    .container .hero-section .main .hero-content{
+        padding: 0rem 8% 0rem 8%;
+        width: 90%;
+        height: 40%;
+        gap: 0.5rem;
+        align-items: center;
+    }
+
+    .container .hero-section .main .hero-content .hero-heading{
+        font-size: 163%;
+        font-weight: 500;
+        text-align: center;
+    }
+
+    .container .hero-section .main .hero-content .hero-para{
+        display: none;
+    }
+
+    .container .hero-section .main{
+        row-gap: 0;
+    }
+
+    /* Why Choose Us Section */
+
+    .container .why-choose-us {
+        top: 0;
+        padding: 2rem;
+        row-gap: 3rem;
+        min-height: fit-content;
+    }
+
+    .why-choose-us .head-des {
+        flex-direction: column-reverse;
+    }
+
+    .container .why-choose-us .head-des .leftBox img {
+        display: none;
+    }
+
+    .container .why-choose-us .head-des .rightBox {
+        width: 100%;
+    }
+
+    .container .why-choose-us .head-des .rightBox h1 {
+        width: 90%;
+        font-size: 210%;
+    }
+
+    .container .why-choose-us .head-des .rightBox p {
+        width: 100%;
+    }
+
+    .why-choose-us .number-container {
+        flex-direction: column;
+        width: 100%;
+        margin-top: 0;
+    }
+
+    /* Services Section */
+
+    .services{
+        min-height: fit-content;
+    }
+    .services .service-container{
+        min-height: fit-content;
+        width: 100%;
+        grid-template-columns: 1fr;
+        grid-template-rows: 14rem 14rem 14rem 14rem 14rem;
+        grid-template-areas:
+        'first'
+        'second'
+        'third'
+        'fourth'
+        'fifth';
+        place-content: baseline;
+        padding: 2rem;
+    }
+    .services .service-items:first-child{
+        gap: 1rem;
+    }
+    .services .service-items:first-child h3{
+            width: 100%;
+            font-size: 161%;
+    }
+    .services .service-items:first-child a{
+        top: 0;
+        font-size: 100%;
+        padding: 0.5rem 0.8rem;
+    }
+
+    /* Courses Section  */
+
+    .courses-section{
+        min-height: fit-content;
+        justify-content: start;
+        margin-top: 3rem;
+    }
+
+    .section-title{
+        font-size: 2rem;
+        margin-bottom: 2rem;
+    }
+
+    .courses-container{
+        flex-direction: column;
+        height: fit-content;
+        width: 100%;
+    }
+
+    .course-card{
+        height: 33%;
+        width: 100%;
+        padding: 0rem 1rem 1rem 1rem;
+    }
+
+    .course-title{
+        padding: 0;
+        margin: 0;
+    }
+
+    .how-it-works{
+        margin-top: 2rem;
+        min-height: fit-content;
+    }
+
+    .how-it-works h1{
+        font-size: 270%;
+    }
+
+    .how-it-works .container{
+        min-height: fit-content;
+        flex-direction: column;
+        row-gap: 2rem;
+        padding: 2rem 0rem;
+    }
+
+    .how-it-works .container .item{
+        min-height: 30%;
+        width: 100%;
+    }
+
+    .footer-container{
+        justify-content: center;
+        padding: 0rem 1rem;
+    }
+
+    footer .footer-container .section{
+        min-width: 42%;
+    }
+
+    .section h2{
+        font-size: 1.2rem;
+    }
+    .section ul{
+        font-size: 0.8rem;
+    }
+
+    .section pre span{
+        font-size: 0.9rem;
+    }
+    .section:first-child{
+        display: none;
+    }
+
+    .sidebar{
+        width: 90%;
+        background-color: rgba(70, 70, 70, 1);
+    }
+    
+}
+
+@media (min-width: 50px) and (max-width:320px) {
+    nav .left-items {
+        display: none;
+    }
+
+    nav .right-items .other{
+        display: none;
+    }
+
+    nav .right-items{
+        right: 0rem;
+    }
+
+    nav .center {
+        left: 4%;
+    }
+
+    .form-container .login-popup{
+        width: 90%;
+        padding: 1.5rem;
+    }
+
+    nav{
+        min-height: 3rem;
+        top: 0rem;
+        padding: 0;
+    }
+
+    /* Hero Section */
+
+    .container .hero-section .main .content-papa{
+        flex-direction: column-reverse;
+        gap: 0rem;
+        align-items: center;
+        justify-content: start;
+    }
+
+    .container .hero-section .main .content-papa img{
+        width: 100%;
+        height: 100%;
+        padding: 0rem 5%;
+    }
+
+    .container .hero-section .main .content-papa .hero-image{
+        height: 45%;
+        width: 80%;
+        margin-top: 0;
+    }
+
+    .container .hero-section .main .hero-content{
+        padding: 0rem 8% 0rem 8%;
+        width: 90%;
+        height: 40%;
+        gap: 0.5rem;
+        align-items: center;
+    }
+
+    .container .hero-section .main .hero-content .hero-heading{
+        font-size: 163%;
+        font-weight: 500;
+        text-align: center;
+    }
+
+    .container .hero-section .main .hero-content .hero-para{
+        display: none;
+    }
+
+    .container .hero-section .main{
+        row-gap: 0;
+    }
+
+    /* Why Choose Us Section */
+
+    .container .why-choose-us {
+        top: 0;
+        padding: 2rem;
+        row-gap: 3rem;
+        min-height: fit-content;
+    }
+
+    .why-choose-us .head-des {
+        flex-direction: column-reverse;
+    }
+
+    .container .why-choose-us .head-des .leftBox img {
+        display: none;
+    }
+
+    .container .why-choose-us .head-des .rightBox {
+        width: 100%;
+    }
+
+    .container .why-choose-us .head-des .rightBox h1 {
+        width: 90%;
+        font-size: 210%;
+    }
+
+    .container .why-choose-us .head-des .rightBox p {
+        width: 100%;
+    }
+
+    .why-choose-us .number-container {
+        flex-direction: column;
+        width: 100%;
+        margin-top: 0;
+    }
+
+    /* Services Section */
+
+    .services{
+        min-height: fit-content;
+    }
+    .services .service-container{
+        min-height: fit-content;
+        width: 100%;
+        grid-template-columns: 1fr;
+        grid-template-rows: 14rem 14rem 14rem 14rem 14rem;
+        grid-template-areas:
+        'first'
+        'second'
+        'third'
+        'fourth'
+        'fifth';
+        place-content: baseline;
+        padding: 2rem;
+    }
+    .services .service-items:first-child{
+        gap: 1rem;
+    }
+    
+    .services .service-items:first-child h3{
+            width: 100%;
+            font-size: 161%;
+    }
+    .services .service-items:first-child a{
+        top: 0;
+        font-size: 100%;
+        padding: 0.5rem 0.8rem;
+    }
+
+    /* Courses Section  */
+
+    .courses-section{
+        min-height: fit-content;
+        justify-content: start;
+        margin-top: 3rem;
+    }
+
+    .section-title{
+        font-size: 2rem;
+        margin-bottom: 2rem;
+    }
+
+    .courses-container{
+        flex-direction: column;
+        height: fit-content;
+        width: 100%;
+    }
+
+    .course-card{
+        height: 33%;
+        width: 100%;
+        padding: 0rem 1rem 1rem 1rem;
+    }
+
+    .course-title{
+        padding: 0;
+        margin: 0;
+    }
+
+    .how-it-works{
+        margin-top: 2rem;
+        min-height: fit-content;
+    }
+
+    .how-it-works h1{
+        font-size: 270%;
+    }
+
+    .how-it-works .container{
+        min-height: fit-content;
+        flex-direction: column;
+        row-gap: 2rem;
+        padding: 2rem 0rem;
+    }
+
+    .how-it-works .container .item{
+        min-height: 30%;
+        width: 100%;
+    }
+
+    .footer-container{
+        justify-content: center;
+        padding: 0rem 1rem;
+    }
+
+    footer .footer-container .section{
+        min-width: 42%;
+    }
+
+    .section h2{
+        font-size: 1.2rem;
+    }
+    .section ul{
+        font-size: 0.8rem;
+    }
+
+    .section pre span{
+        font-size: 0.9rem;
+    }
+    .section:first-child{
+        display: none;
+    }
+
+    .sidebar{
+        width: 90%;
+        background-color: rgba(70, 70, 70, 1);
+    }
+    
+}
