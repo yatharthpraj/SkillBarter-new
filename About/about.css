@@ -67,7 +67,7 @@ nav {
     .hamburger {
         border: none;
         cursor: pointer;
-        /* display: none; */
+        display: none;
         background-color: initial;
         position: relative;
         /* left: 1rem; */

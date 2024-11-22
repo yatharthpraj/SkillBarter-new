@@ -188,16 +188,16 @@ nav .left-items li :hover::after {
     width: 100%;
 }
 
-.filter-course-container{
+.filter-course-container {
     display: flex;
     position: relative;
     height: 100%;
     width: 100%;
-    
+
 
 }
 
-.filter-container{
+.filter-container {
     min-height: 100%;
     width: 18%;
     /* border: 2px solid lime; */
@@ -205,13 +205,13 @@ nav .left-items li :hover::after {
     position: sticky;
     top: 3rem;
     left: 0;
-    padding:   1rem;
+    padding: 1rem;
     box-shadow: 4px 0 8px rgba(0, 0, 0, 0.1);
     /* border: 2px solid red; */
     display: flex;
     flex-direction: column;
-    
-    .filter-checkbox{
+
+    .filter-checkbox {
         position: sticky;
         top: 2rem;
         height: fit-content;
@@ -221,34 +221,38 @@ nav .left-items li :hover::after {
         /* align-items: center; */
         flex-direction: column;
         gap: 2rem;
-        .checkbox{
+
+        .checkbox {
             flex-direction: column;
             display: flex;
             justify-content: center;
             /* align-items: center; */
             gap: 1rem;
             position: relative;
-            a{
+
+            a {
                 text-decoration: none;
                 font-size: 120%;
                 font-weight: 500;
                 color: black;
                 width: 100%;
                 height: fit-content;
-                padding: 4px ;
+                padding: 4px;
                 border-radius: 10px;
                 display: flex;
                 align-items: center;
                 gap: 1rem;
-                &:hover{
-                    background-color:rgba(130, 130, 130, 0.1) ;
+
+                &:hover {
+                    background-color: rgba(130, 130, 130, 0.1);
                 }
             }
 
         }
-       
+
     }
-    .quote{
+
+    .quote {
         width: 100%;
         height: fit-content;
         position: sticky;
@@ -259,21 +263,23 @@ nav .left-items li :hover::after {
         display: flex;
         align-items: center;
         justify-content: center;
-        text-wrap:balance;
-        p{
+        text-wrap: balance;
+
+        p {
             width: 80%;
             min-height: fit-content;
         }
-        
+
     }
 }
-.course-container{
+
+.course-container {
     display: flex;
     flex-direction: column;
     height: 100%;
     width: 80%;
     position: relative;
-   
+
 }
 
 .service-container {
@@ -288,9 +294,9 @@ nav .left-items li :hover::after {
     gap: 2rem;
     /* padding: 1rem; */
     margin: 1rem 1rem;
-  }
-  
-  .slider-wrapper {
+}
+
+.slider-wrapper {
     overflow: hidden;
     width: 100%;
     height: fit-content;
@@ -300,22 +306,22 @@ nav .left-items li :hover::after {
     flex-direction: column;
     gap: 2.5rem;
     padding: 0 2rem;
-  }
-  
-  .slider {
+}
+
+.slider {
     width: 100%;
     height: fit-content;
     display: flex;
     transition: transform 0.5s ease;
     gap: 2rem;
     /* will-change: transform; */
-  }
-  
-  .card {
+}
+
+.card {
     flex: 0 0 auto;
     /* min-width: calc(100% / 3); */
     width: 30%;
-     /* Adjust based on visible cards */
+    /* Adjust based on visible cards */
     height: 350px;
     margin: 0 1rem;
     background: white;
@@ -329,11 +335,26 @@ nav .left-items li :hover::after {
     align-items: start;
     flex-direction: column;
     transition: 0.3s;
-    img{
+
+    img {
         height: 40%;
         width: 100%;
+         
     }
-    a{
+    .know-more{
+        height: 0%;
+        width: 100%;
+        position: relative;
+        background-image:linear-gradient( rgba(0, 0, 0, 0.1) 80%, rgba( 0,0,0,0.4));
+        z-index: -1;
+        transition: 200ms;
+        a{
+            background-color: transparent;
+            color: black;
+        }
+    }
+
+    a {
         width: 60%;
         /* height: 1.4rem; */
         text-align: center;
@@ -344,17 +365,23 @@ nav .left-items li :hover::after {
         padding: 2px 4px;
         font-size: 110%;
         font-weight: 500;
-        &:hover{
+
+        &:hover {
             opacity: 0.8;
         }
     }
-    &:hover{
+
+    &:hover {
         transform: scale(1.04);
+        .know-more{
+            transform: translateY(-40%);
+            height: 40%;
+        }
     }
    
-  }
-  
-  .slider-btn {
+}
+
+.slider-btn {
     background: var(--bg-color);
     color: white;
     border: none;
@@ -369,20 +396,21 @@ nav .left-items li :hover::after {
     position: absolute;
     top: 50%;
     z-index: 1;
-  }
-  
-  .prev-btn {
+}
+
+.prev-btn {
     left: 10px;
-  }
-  
-  .next-btn {
+}
+
+.next-btn {
     right: 10px;
-  }
-  
-  .slider-btn:hover {
+}
+
+.slider-btn:hover {
     opacity: 0.6;
-  }
-  footer {
+}
+
+footer {
     position: relative;
     top: 13%;
     min-height: 50%;
@@ -390,7 +418,7 @@ nav .left-items li :hover::after {
     /* background-color: #053d1a; */
     background-image: url(../Assets/FooterWaves.jpeg);
     background-repeat: no-repeat;
-    background-size: 100% 99% ;
+    background-size: 100% 99%;
     background-position: bottom;
 
     .footer-container {
@@ -425,7 +453,7 @@ nav .left-items li :hover::after {
             min-width: auto;
             height: 100%;
 
-            h2{
+            h2 {
                 margin-bottom: 1rem;
             }
 
@@ -462,21 +490,26 @@ nav .left-items li :hover::after {
 
 
 
-  @media (max-width: 768px) {
+@media (max-width: 768px) {
     .card {
-        min-width: calc(100% / 2); /* Show 2 cards on smaller screens */
+        min-width: calc(100% / 2);
+        /* Show 2 cards on smaller screens */
 
     }
+
     .post {
-        min-width: calc(100% / 2); /* Show 2 cards on smaller screens */
-      }
-  }
-  
-  @media (max-width: 480px) {
-    .card {
-      min-width: 100%;
+        min-width: calc(100% / 2);
+        /* Show 2 cards on smaller screens */
     }
+}
+
+@media (max-width: 480px) {
+    .card {
+        min-width: 100%;
+    }
+
     .post {
-        min-width: 100%; /* Show 1 card on very small screens */
-      }
-  }
+        min-width: 100%;
+        /* Show 1 card on very small screens */
+    }
+}

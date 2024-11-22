@@ -724,7 +724,8 @@ nav .left-items li :hover::after {
         font-weight: 600;
         border-radius: 120px;
         padding: 0.5rem 1.8rem;
-
+        text-decoration: none;
+        color: black;
         svg {
             margin-left: 6px;
         }
@@ -788,6 +789,7 @@ nav .left-items li :hover::after {
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
     text-align: center;
     transition: transform 0.3s ease;
+    
 }
 
 .course-image-container{
@@ -820,6 +822,7 @@ nav .left-items li :hover::after {
     cursor: pointer;
     background-color: #F7AD19;
     transition: background-color 0.3s ease;
+    text-decoration: none;
 }
 
 .view-course-btn:hover {
@@ -914,6 +917,12 @@ footer {
             height: 80;
             width: 50%;
         }
+        .section:nth-child(2) ul,.section:nth-child(3){
+            display: flex;
+            flex-direction: column;
+            row-gap: 0.6rem;
+        }
+        
 
         .section {
             /* border: 2px solid white; */
@@ -950,6 +959,7 @@ footer {
                 }
 
             }
+            
         }
 
     }
