@@ -1,5 +1,5 @@
 /* MEDIA QUERIES */
-
+/* This is responsive CSS page */
 @media (min-width:1025px) and (max-width:1440px) {
     .container .hero-section .main .hero-heading {
         font-size: 267%;
