@@ -40,20 +40,23 @@ body {
     margin-bottom: 10px;
     color: #333;
 }
-
-.form-section p {
+.form-section p  {
     font-size: 14px;
-    color: #666;
+    /* color: #666; */
     margin-bottom: 20px;
+}
+.post-content-btn {
+    /* text-align: center; */
+    color: blue;
+    text-decoration: underline;
+    cursor: pointer;
+    width: fit-content;
 }
 
 .form-group {
     margin-bottom: 15px;
-    .post-content-btn a{
-        text-align: center;
-        color: blue;
-        text-decoration: underline;
-    }
+    width: 100%;
+    height: fit-content;
     .teaching-modes{
         height: auto;
         width: 100%;
@@ -77,13 +80,15 @@ body {
     color: #555;
 }
 
-.form-group input, .form-group select {
+.form-group input, .form-group select,.form-group textarea {
     width: 100%;
+    height: fit-content;
     padding: 10px;
     border-radius: 5px;
     border: 1px solid #ddd;
     font-size: 14px;
 }
+
 
 /* Special styles for profile picture */
 .form-group input[type="file"] {

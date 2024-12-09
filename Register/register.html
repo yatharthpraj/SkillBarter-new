@@ -13,65 +13,75 @@
         <!-- Form Section -->
         <div class="form-section">
             <h2>Sign Up For Free</h2>
-            <form action="#" method="get">
+            <form action="register.php" method="post">
                 <div class="form-group">
                     <label for="name">Full Name</label>
-                    <input type="text" id="name" placeholder="Full Name">
+                    <input type="text" id="name" name="name" placeholder="Full Name">
                 </div>
-
-
+            
                 <div class="form-group">
                     <label for="email">E-Mail</label>
-                    <input type="email" id="email" placeholder="youremail@example.com">
+                    <input type="email" id="email" name="email" placeholder="youremail@example.com">
                 </div>
-
+            
                 <div class="form-group">
                     <label for="password">Password</label>
-                    <input type="password" id="password" placeholder="********">
+                    <input type="password" id="password" name="password" placeholder="********"
+                    minlength="8" pattern="(?=.*\d)(?=.*[a-z])(?=.*[@#$%^&+=]).{8,}" 
+                    title="Must contain at least 8 characters, one lowercase letter, one number, and one special character.">
                 </div>
-                <a href="#" class="post-content-btn" onclick="document.querySelector('.post-content').style.display='block',document.querySelector('.post-content-btn').style.display='none'"> Start with your first post </a>
-                <div class="post-content">
-                    <div class="form-group">
-                        <label for="skills">Skills</label>
-                        <select id="skills">
-                            <option value="">Select your skill</option>
-                            <option value="programming">Programming</option>
-                            <option value="design">Design</option>
-                            <option value="marketing">Marketing</option>
-                        </select>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="experience">Experience (Years)</label>
-                        <input type="number" name="experience" id="experience" min="0" max="100" value="0" required>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="interest">Interested In</label>
-                        <select id="interest">
-                            <option value="">Select your interest</option>
-                            <option value="full-time">Full-time</option>
-                            <option value="part-time">Part-time</option>
-                            <option value="internship">Internship</option>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <label for="mode">Teaching mode:</label>
-                        <div class="teaching-modes">
-                            <input type="radio" name="mode" id="offline" value="Offline" required>
-                            <label for="offline">Offline</label>
-                            <input type="radio" name="mode" id="online" value="online" required>
-                            <label for="online">Online</label>
-                            <input type="radio" name="mode" id="both" value="both" required>
-                            <label for="both">Both</label>
-                        </div>
+            
+                <div class="form-group">
+                    <label for="skills">Skills</label>
+                    <select id="skills" name="skills">
+                        <option value="">Select your skill</option>
+                        <option value="programming">Programming</option>
+                        <option value="design">Design</option>
+                        <option value="marketing">Marketing</option>
+                    </select>
+                </div>
+            
+                <div class="form-group">
+                    <label for="experience">Experience (Years)</label>
+                    <input type="number" name="experience" id="experience" min="0" max="100" value="0">
+                </div>
+            
+                <div class="form-group">
+                    <label for="interest">Interested In</label>
+                    <select id="interest" name="interest">
+                        <option value="">Select your interest</option>
+                        <option value="music-production">Music Production</option>
+                        <option value="programming">Programming</option>
+                        <option value="art-craft">Arts and Craft</option>
+                        <option value="game-development">Game Development</option>
+                        <option value="stock-market">Stock Market</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="mobile">Mobile</label>
+                    <input type="tel" name="mobile" min="10" max="10" id="mobile" placeholder=" +91-9999988822">
+                </div>
+                <div class="form-group">
+                    <label for="description">Description</label>
+                    <textarea name="description" id="description" placeholder="Enter your description here..." cols="52"></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="mode">Teaching mode:</label>
+                    <div class="teaching-modes">
+                        <input type="radio" name="mode" id="offline" value="Offline">
+                        <label for="offline">Offline</label>
+                        <input type="radio" name="mode" id="online" value="Online">
+                        <label for="online">Online</label>
+                        <input type="radio" name="mode" id="both" value="Both">
+                        <label for="both">Both</label>
                     </div>
                 </div>
-
-
+            
                 <button type="submit" class="submit-btn">Sign Up</button>
                 <p>Already have an Account?<a href="">Login</a></p>
             </form>
+            
+            
         </div>
 
         <!-- Illustration Section -->
