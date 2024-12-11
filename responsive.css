@@ -268,7 +268,7 @@
     } 
 }
 
-@media (min-width: 321px) and (max-width:425px) {
+@media (min-width: 320px) and (max-width:425px) {
     nav .left-items {
         display: none;
     }
@@ -286,7 +286,7 @@
     }
 
     nav{
-        min-height: 3rem;
+        min-height: 18%;
         top: 0rem;
         padding-top: 0.5rem;
     }
@@ -302,6 +302,8 @@
         flex-direction: column-reverse;
         gap: 1rem;
         align-items: center;
+        height: 82%;
+        justify-content: space-around;
     }
 
     .container .hero-section .main .content-papa img{
