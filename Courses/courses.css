@@ -1045,6 +1045,7 @@ footer {
     .filter-container .filter-checkbox .checkbox{
         flex-direction: row;
         overflow-x: scroll;
+        justify-content: start;
     }
 
     .filter-checkbox .quote{
