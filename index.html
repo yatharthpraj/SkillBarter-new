@@ -103,7 +103,7 @@
                             fill="#ffffff">
                             <path
                                 d="M384-480q-60 0-102-42t-42-102q0-60 42-102t102-42q60 0 102 42t42 102q0 60-42 102t-102 42ZM96-192v-92q0-26 12.5-47.5T143-366q55-32 116-49t125-17q11 0 20.5.5T425-430q-7 17-10.5 35t-5.5 36l-25-1q-54 0-106 14t-99 42q-4.95 2.94-7.98 8.24Q168-290.47 168-284v20h251q4.85 18.63 12.92 36.81Q440-209 451-192H96Zm543 48-12-56q-14-5-26.5-12T577-228l-55 17-32-55 41-40q-4-14-3.5-29t3.5-29l-41-39 32-56 54 16q11-10 24-17.5t27-11.5l13-56h64l13 56q14 5 27 12t24 17l54-15 32 55-40 38q2 15 2 30.05 0 15.06-3 28.95l41 39-32 55-55-16q-11 9-23.5 16.5T717-200l-14 56h-64Zm33.21-120Q702-264 723-285.21t21-51Q744-366 722.79-387t-51-21Q642-408 621-386.79t-21 51Q600-306 621.21-285t51 21Zm-288-288Q414-552 435-573.21t21-51Q456-654 434.79-675t-51-21Q354-696 333-674.79t-21 51Q312-594 333.21-573t51 21Zm-.21-72Zm35 360Z" />
-                        </svg><a href="./Service/service.html">Services</a>
+                        </svg><a href="./Service/service.php">Services</a>
                     </li>
                     <li>
                         <svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px"
@@ -150,8 +150,11 @@
                             fill="#fff">
                             <path
                                 d="M216-144q-29.7 0-50.85-21.15Q144-186.3 144-216v-528q0-29.7 21.15-50.85Q186.3-816 216-816h264v72H216v528h264v72H216Zm432-168-51-51 81-81H384v-72h294l-81-81 51-51 168 168-168 168Z" />
-                        </svg><a href="#">
-                            Logout</a>
+                        </svg>
+                        <form action="login.php" method="post">
+                            <!-- <a href="login.php?logout=true">Logout</a> -->
+                            <button type="submit" name="logout" >Logout</button>
+                        </form>
                     </li>
                 </ul>
                 <div class="sidebar-anchor">
@@ -175,17 +178,12 @@
                             d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z" />
                     </svg>
                 </button>
-                <form action="/" class="form" method="post">
-                    <center>
-                        <h2>Login or Sign up</h2>
-                    </center>
-
-                    <!-- <label for="email">Email:</label> -->
+                <form action="login.php" class="form" method="post">
+                    <center><h2>Login or Sign up</h2></center>
                     <input type="email" name="Email" id="email" placeholder="Email*" required>
-                    <!-- <label for="password">Password:</label>  -->
                     <input type="password" name="password" id="password" placeholder="Password*" required>
                     <a>Forgot password?</a>
-                    <button>Login</button>
+                    <button type="submit" name="login">Login</button>
                 </form>
                 <p>New to Website?
                     <a class="create-account" href="./Register/register.html"
@@ -228,7 +226,7 @@
             <div class="service-container">
                 <div class="service-items">
                     <h3>Our <span>Features</span> Special For you</h3>
-                    <a href="./Service/service.html">Explore Services <svg xmlns="http://www.w3.org/2000/svg" height="15px" viewBox="0 -960 960 960"
+                    <a href="./Service/service.php">Explore Services <svg xmlns="http://www.w3.org/2000/svg" height="15px" viewBox="0 -960 960 960"
                             width="15px" fill="#000000 ">
                             <path d="m216-160-56-56 464-464H360v-80h400v400h-80v-264L216-160Z" />
                         </svg></a>
