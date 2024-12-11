@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="service.css">
-    <title>Service</title>
+    <title>Services</title>
 </head>
 
 <body>
@@ -29,12 +29,45 @@
                     onclick="document.querySelector('.form-container').style.display='flex'">Login</button>
             </ul>
         </nav>
+        <div class="form-container">
+            <div class="login-popup" id="form-popup">
+
+                <button onclick="document.querySelector('.form-container').style.display='none'"><svg
+                        xmlns="http://www.w3.org/2000/svg" height="30px" viewBox="0 -960 960 960" width="30px"
+                        fill="#000000">
+                        <path
+                            d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z" />
+                    </svg>
+                </button>
+                <form action="login.php" class="form" method="post">
+                    <center>
+                        <h2>Login or Sign up</h2>
+                    </center>
+                    <input type="email" name="Email" id="email" placeholder="Email*" required>
+                    <input type="password" name="password" id="password" placeholder="Password*" required>
+                    <a>Forgot password?</a>
+                    <button type="submit" name="login">Login</button>
+                </form>
+                <p>New to Website?
+                    <a class="create-account" href="./Register/register.html"
+                        onclick=" document.querySelector('.form-container').style.display='none'">Create
+                        New Account</a>
+                </p>
+            </div>
+        </div>
         <div class="filter-container">
             <div class="filter-header">
                 <button class="filter-btn"
-                    onclick="document.querySelector('.filter-content').style.display='flex'">Filter By Category</button>
+                    onclick="document.querySelector('.filter-content').style.display='flex'">Filter By Category
+                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"
+                        fill="#111">
+                        <path d="M480-344 240-584l56-56 184 184 184-184 56 56-240 240Z" />
+                    </svg>
+                </button>
                 <div class="create-post">
-                    <button onclick="document.querySelector('.create-post-form').style.display='flex'">Create Post +</button>
+                    <button class="create-btn"
+                        onclick="document.querySelector('.create-post-form').style.display='flex'">Create Post
+                        +</button>
                     <button onclick="document.getElementById('your-post').style.display='flex'">My Posts</button>
                 </div>
             </div>
@@ -49,18 +82,28 @@
                     </select>
                 </div> -->
                 <div class="filter-checkbox">
-                    <h2>Filter by category</h2>
+                    <!-- <h2>Filter by category</h2> -->
                     <div class="checkbox">
-                        <label for="filter-item-1">Filter-1</label>
-                        <input type="checkbox" name="filter" id="filter-item-1" value="filter-1">
-                        <label for="filter-item-2">Filter-2</label>
-                        <input type="checkbox" name="filter" id="filter-item-2" value="filter-2">
-                        <label for="filter-item-3">Filter-3</label>
-                        <input type="checkbox" name="filter" id="filter-item-3" value="filter-3">
-                        <label for="filter-item-4">Filter-4</label>
-                        <input type="checkbox" name="filter" id="filter-item-4" value="filter-4">
-                        <label for="filter-item-5">Filter-5</label>
-                        <input type="checkbox" name="filter" id="filter-item-5" value="filter-5">
+                        <div class="filter">
+                            <input type="checkbox" name="filter" id="filter-item-1" value="filter-1">
+                            <label for="filter-item-1" class="checkbox-label">Music Production</label>
+                        </div>
+                        <div class="filter">
+                            <input type="checkbox" name="filter" id="filter-item-2" value="filter-2">
+                            <label for="filter-item-2" class="checkbox-label">Programming</label>
+                        </div>
+                        <div class="filter">
+                            <input type="checkbox" name="filter" id="filter-item-3" value="filter-3">
+                            <label for="filter-item-3" class="checkbox-label">Art</label>
+                        </div>
+                        <div class="filter">
+                            <input type="checkbox" name="filter" id="filter-item-4" value="filter-4">
+                            <label for="filter-item-4" class="checkbox-label">Stock Market</label>
+                        </div>
+                        <div class="filter">
+                            <input type="checkbox" name="filter" id="filter-item-5" value="filter-5">
+                            <label for="filter-item-5" class="checkbox-label">Game Development</label>
+                        </div>
                     </div>
                     <button onclick="document.querySelector('.filter-content').style.display='none'">Apply</button>
                 </div>
@@ -77,30 +120,32 @@
                     </svg>
                 </button>
             </div>
-            <form action="#" method="post">
+            <form action="../register/register.php" method="POST">
                 <label for="skill">Enter your Skill:</label>
-                <select name="skill" id="skill" required>
-                    <option value="option-1">Option-1</option>
-                    <option value="option-1">Option-2</option>
-                    <option value="option-1">Option-3</option>
-                    <option value="option-1">Option-4</option>
-                    <option value="option-1">Option-5</option>
-                    <option value="option-1">Option-6</option>
-                    <option value="option-1">Others</option>
-                </select>
+                <select id="skills" name="skills">
+                        <option value="">Select your Skill</option>
+                        <option value="music-production">Music Production</option>
+                        <option value="programming">Programming</option>
+                        <option value="art-craft">Arts and Craft</option>
+                        <option value="game-development">Game Development</option>
+                        <option value="stock-market">Stock Market</option>
+                    </select>
                 <label for="experience">Experience:</label>
-                <input type="number" min="0" max="50" value="0" id="experience" required>
+                <input type="number" min="0" max="100" value="0" id="experience" required>
 
                 <label for="exchange-skill">What you want to learn in Exchange:</label>
-                <select name="Exchange-skill" id="exchange-skill" required>
-                    <option value="option-1">Option-1</option>
-                    <option value="option-1">Option-2</option>
-                    <option value="option-1">Option-3</option>
-                    <option value="option-1">Option-4</option>
-                    <option value="option-1">Option-5</option>
-                    <option value="option-1">Option-6</option>
-                    <option value="option-1">Others</option>
-                </select>
+                <select id="interest" name="interest">
+                        <option value="">Select your interest</option>
+                        <option value="music-production">Music Production</option>
+                        <option value="programming">Programming</option>
+                        <option value="art-craft">Arts and Craft</option>
+                        <option value="game-development">Game Development</option>
+                        <option value="stock-market">Stock Market</option>
+                    </select>
+                    <label for="description">Description:</label>
+                    <textarea name="description" id="description" placeholder="Enter your description here..." cols="52"></textarea>
+                    <label for="mobile">Mobile:</label>
+                    <input type="tel" name="mobile" min="10" max="10" id="mobile" placeholder=" +91-9999988822">
                 <label for="mode">Teaching mode:</label>
                 <div class="teaching-modes">
                     <input type="radio" name="mode" id="offline" value="Offline" required>
@@ -110,16 +155,21 @@
                     <input type="radio" name="mode" id="both" value="both" required>
                     <label for="both">Both</label>
                 </div>
-                <input type="submit" value="Submit">
+                <input type="submit" value="Submit" name="submit_skills">
             </form>
         </div>
         <div id="your-post" class="service-container">
             <button class="slider-btn prev-btn">&#10094;</button>
             <div class="slider-wrapper">
                 <div class="slider-header">
-                <h1>Your Posts</h1>
+                    <h1>Your Posts</h1>
 
-                    <button onclick="document.getElementById('your-post').style.display='none'"><svg xmlns="http://www.w3.org/2000/svg" height="35px" viewBox="0 -960 960 960" width="35    px" fill="#000000"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg></button>
+                    <button onclick="document.getElementById('your-post').style.display='none'"><svg
+                            xmlns="http://www.w3.org/2000/svg" height="35px" viewBox="0 -960 960 960" width="35    px"
+                            fill="#000000">
+                            <path
+                                d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z" />
+                        </svg></button>
                 </div>
 
                 <div class="slider">
@@ -282,12 +332,14 @@
                                 <p>Offline</p>
                             </div>
                         </div>
-                            <div class="card-contact">
-                                <h3>Contact </h3>
+                        <!-- <div class="card-contact">
+                                <h3>Experience: </h3>
+                                <p>1</p>
+                                <h3>Contact: </h3>
                                 <p>+91-1234567890</p>
-                                <h3>Email:</h3>
+                                <h3>Email: </h3>
                                 <p>email@gmail.com</p>
-                            </div>
+                            </div> -->
                     </div>
                     <div class="card">
                         <div class="contact-details">
@@ -313,12 +365,12 @@
                                 <p>Offline</p>
                             </div>
                         </div>
-                            <div class="card-contact">
+                        <!-- <div class="card-contact">
                                 <h3>Contact </h3>
                                 <p>+91-1234567890</p>
                                 <h3>Email:</h3>
                                 <p>email@gmail.com</p>
-                            </div>
+                            </div> -->
                     </div>
                     <div class="card">
                         <div class="contact-details">
@@ -344,12 +396,12 @@
                                 <p>Offline</p>
                             </div>
                         </div>
-                            <div class="card-contact">
+                        <!-- <div class="card-contact">
                                 <h3>Contact </h3>
                                 <p>+91-1234567890</p>
                                 <h3>Email:</h3>
                                 <p>email@gmail.com</p>
-                            </div>
+                            </div> -->
                     </div>
                     <div class="card ">
                         <div class="contact-details">
@@ -375,12 +427,12 @@
                                 <p>Offline</p>
                             </div>
                         </div>
-                            <div class="card-contact">
+                        <!-- <div class="card-contact">
                                 <h3>Contact </h3>
                                 <p>+91-1234567890</p>
                                 <h3>Email:</h3>
                                 <p>email@gmail.com</p>
-                            </div>
+                            </div> -->
                     </div>
                     <div class="card">
                         <div class="contact-details">
@@ -406,12 +458,12 @@
                                 <p>Offline</p>
                             </div>
                         </div>
-                            <div class="card-contact">
+                        <!-- <div class="card-contact">
                                 <h3>Contact </h3>
                                 <p>+91-1234567890</p>
                                 <h3>Email:</h3>
                                 <p>email@gmail.com</p>
-                            </div>
+                            </div> -->
                     </div>
                 </div>
             </div>
@@ -448,12 +500,12 @@
                                 <p>Offline</p>
                             </div>
                         </div>
-                        <div class="card-contact">
+                        <!-- <div class="card-contact">
                             <h3>Contact </h3>
                             <p>+91-1234567890</p>
                             <h3>Email:</h3>
                             <p>email@gmail.com</p>
-                        </div>
+                        </div> -->
                     </div>
                     <div class="card">
                         <div class="contact-details">
@@ -479,12 +531,12 @@
                                 <p>Offline</p>
                             </div>
                         </div>
-                        <div class="card-contact">
+                        <!-- <div class="card-contact">
                             <h3>Contact </h3>
                             <p>+91-1234567890</p>
                             <h3>Email:</h3>
                             <p>email@gmail.com</p>
-                        </div>
+                        </div> -->
                     </div>
                     <div class="card">
                         <div class="contact-details">
@@ -510,12 +562,12 @@
                                 <p>Offline</p>
                             </div>
                         </div>
-                        <div class="card-contact">
+                        <!-- <div class="card-contact">
                             <h3>Contact </h3>
                             <p>+91-1234567890</p>
                             <h3>Email:</h3>
                             <p>email@gmail.com</p>
-                        </div>
+                        </div> -->
                     </div>
                     <div class="card ">
                         <div class="contact-details">
@@ -541,12 +593,12 @@
                                 <p>Offline</p>
                             </div>
                         </div>
-                        <div class="card-contact">
+                        <!-- <div class="card-contact">
                             <h3>Contact </h3>
                             <p>+91-1234567890</p>
                             <h3>Email:</h3>
                             <p>email@gmail.com</p>
-                        </div>
+                        </div> -->
                     </div>
                     <div class="card">
                         <div class="contact-details">
@@ -572,12 +624,12 @@
                                 <p>Offline</p>
                             </div>
                         </div>
-                        <div class="card-contact">
+                        <!-- <div class="card-contact">
                             <h3>Contact </h3>
                             <p>+91-1234567890</p>
                             <h3>Email:</h3>
                             <p>email@gmail.com</p>
-                        </div>
+                        </div> -->
                     </div>
                 </div>
             </div>
@@ -612,12 +664,12 @@
                                 <p>Offline</p>
                             </div>
                         </div>
-                        <div class="card-contact">
+                        <!-- <div class="card-contact">
                             <h3>Contact </h3>
                             <p>+91-1234567890</p>
                             <h3>Email:</h3>
                             <p>email@gmail.com</p>
-                        </div>
+                        </div> -->
                     </div>
                     <div class="card">
                         <div class="contact-details">
@@ -767,11 +819,11 @@
                 <div class="section">
                     <h2>Navigation</h2>
                     <ul>
-                        <li><a href="../index.html">Home</a></li>
-                        <li><a href="../About/about.html">About Us</a></li>
-                        <li><a href="../index.html#how-it-works">Guide</a></li>
-                        <li><a href="../Courses/courses.html">Courses</a></li>
-                        <li><a href="../HelpAndSupport/support.html">Help And Support</a></li>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="./About/about.html">About Us</a></li>
+                        <li><a href="#how-it-works">Guide</a></li>
+                        <li><a href="./Courses/courses.html">Courses</a></li>
+                        <li><a href="./HelpAndSupport/support.html" target="_blank">Help And Support</a></li>
                     </ul>
                 </div>
                 <div class="section">
@@ -786,10 +838,10 @@
                 <!-- </div> -->
             </div>
         </footer>
-        </div>
+    </div>
 
 
-        <script src="service.js"></script>
+    <script src="service.js"></script>
 </body>
 
 </html>
