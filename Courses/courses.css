@@ -198,8 +198,8 @@ nav .left-items li :hover::after {
     top: 0;
     left: 0;
     border-radius: 0 10px 10px 0;
-    background-color: rgba(70, 70, 70, 0.449);
-    backdrop-filter: blur(50px);
+    background-color: rgba(0, 0, 0, 0.486);
+    backdrop-filter: blur(20px);
     box-shadow: 2px 0 1px 0px rgb(219, 219, 219);
     animation: sideBar 0.3s ease-in forwards;
 
@@ -374,7 +374,7 @@ nav .left-items li :hover::after {
         background-color: white;
         position: fixed;
         gap: 1rem;
-        padding: 3.5rem;
+        padding: 2.5rem;
         z-index: 1;
         height: 80%;
         width: 40%;
@@ -817,12 +817,16 @@ footer {
 
 
 
-@media (min-width:1201px) and (max-width:1440px) {
+@media (min-width:1390px) and (max-width:1920px) {
+
+    .form-container .login-popup{
+        gap: 4rem;
+    }
     .filter-container{
         padding-right: 1rem;
     }
     .filter-container .filter-checkbox{
-        padding-top: 0.5rem;
+        padding-top: 5.5rem;
         gap: 2rem;
         h2{
             margin-bottom: 0;
@@ -862,7 +866,7 @@ footer {
     }
 
 }
-@media (min-width:869px) and (max-width:1200px) {
+@media (min-width:869px) and (max-width:1389px) {
 
     nav .center {
         left: 50%;
@@ -879,11 +883,13 @@ footer {
     }
 
     .filter-container .filter-checkbox{
-        padding-top: 0.5rem;
+        padding-top: 2.5rem;
         gap: 2rem;
         h2{
+            padding-left: 0.5rem;
+            text-align: start;
             margin-bottom: 0;
-            font-size: 150%;
+            font-size: 140%;
         }
         .checkbox{
             font-size: 85%;
@@ -906,12 +912,16 @@ footer {
             }
             .slider-wrapper{
                 h1{
-                    font-size: 200%;
+                    font-size: 190%;
                 }
                 padding: 0 0 0 1.5rem;
                 gap: 1.5rem;
             }
         }
+    }
+
+    footer{
+        font-size: smaller;
     }
 }
 
@@ -948,10 +958,14 @@ footer {
     .filter-container{
         padding-left: 0.5rem;
         padding-right: 0.5rem;
+
+        .filter-checkbox h2{
+            font-size: 130%;
+        }
     }
     
     .filter-container .filter-checkbox .checkbox a{
-        font-size: 90%;
+        font-size: 80%;
     }
 
     .filter-checkbox .quote{
@@ -973,7 +987,7 @@ footer {
     .slider-wrapper{
         gap: 1.5rem;
         h1{
-            font-size: 210%;
+            font-size: 175%;
         }
     }
 
@@ -1023,6 +1037,7 @@ footer {
     .form-container .login-popup{
         width: 90%;
         padding: 0.5rem 0rem 1rem 0rem;
+        gap: 2rem;
         >button{
             padding-left: 0.5rem;
             padding-top: 0.5rem;

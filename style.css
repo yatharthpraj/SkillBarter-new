@@ -259,7 +259,9 @@ nav .left-items li :hover::after {
                 background-color: rgba(216, 216, 216, 0.282);
             }
 
-            a {
+            a, button {
+                border: none;
+                background: transparent;
                 text-decoration: none;
                 font-size: 120%;
                 color: white;
@@ -530,7 +532,7 @@ nav .left-items li :hover::after {
             height: 100%;
             width: 43%;
             padding: 3rem 2rem 0rem 2rem;
-            gap: 0.2rem;
+            gap: 1rem;
 
             .hero-heading {
                 width: 100%;
