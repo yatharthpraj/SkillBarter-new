@@ -99,76 +99,6 @@ nav {
         }
 
     }
-
-    .right-items {
-        display: flex;
-        /* display: none; */
-        position: relative;
-        margin-left: auto;
-        right: 2rem;
-        /* gap: 1.55rem; */
-        gap: 1vw;
-        justify-content: center;
-        align-items: center;
-        list-style: none;
-
-        li {
-            display: inline-block;
-            position: relative;
-        }
-
-        .other {
-
-            transition: 500ms;
-
-            a {
-                text-decoration: none;
-                font-size: 1.3rem;
-                font-weight: 600;
-                color: white;
-
-                &::after {
-                    content: "";
-                    position: absolute;
-                    left: 0;
-                    bottom: -3px;
-                    width: 0;
-                    height: 2px;
-                    background-color: var(--btn-color);
-                    transition: width 0.3s ease-out;
-                }
-
-                &:hover::after {
-                    width: 100%;
-                }
-            }
-
-
-
-        }
-
-        .login-btn {
-            border: none;
-            height: 2.5rem;
-            width: 6rem;
-            background-color: initial;
-            border: 2px solid #F7AD19;
-            color: white;
-            border-radius: 1.25rem;
-            font-size: 1.25rem;
-            font-weight: 600;
-            transition: 500ms;
-            cursor: pointer;
-
-            /* box-shadow: 2px 1px 2px 1px #BAB68C; */
-            &:hover {
-                /* transform: scale(1.09); */
-                background-color: #F7AD19;
-
-                color: black;
-            }
-        }
-    }
 }
 
 nav .left-items li ::after {
@@ -684,7 +614,6 @@ nav .left-items li :hover::after {
 
     a {
         width: 50%;
-        /* height: 1.4rem; */
         text-align: center;
         text-decoration: none;
         color: white;
@@ -825,7 +754,7 @@ footer {
             pre span{
                     text-decoration: none;
                     color: black;
-                    font-size: 120%;
+                    font-size: 100%;
                     position: relative;
                     display: inline-block;
 
@@ -876,7 +805,7 @@ footer {
         padding-right: 1rem;
     }
     .filter-container .filter-checkbox{
-        padding-top: 5.5rem;
+        padding-top: 2.5rem;
         gap: 2rem;
         h2{
             margin-bottom: 0;
@@ -914,6 +843,14 @@ footer {
             }
         }
     }
+    footer{
+        .section p{
+            font-size: 110%;
+        }
+        .footer-container .section pre span{
+            font-size: 115%;
+        }
+    }
 
 }
 @media (min-width:869px) and (max-width:1389px) {
@@ -942,19 +879,20 @@ footer {
             font-size: 140%;
         }
         .checkbox{
-            font-size: 85%;
+            font-size: 105%;
             gap: 0.5rem;
         }
 
         .quote{
 
-            font-size: 90%;
+            font-size: 100%;
             align-items: center;
             height: 11rem;
         }
     }
 
     .course-container{
+        width: 82%;
         .service-container{
             width: 96%;
             .slider-btn{
@@ -971,7 +909,15 @@ footer {
     }
 
     footer{
-        font-size: smaller;
+        .section p{
+            font-size: 100%;
+        }
+        .footer-container .section ul li a{
+            font-size: 110%;
+        }
+        .footer-container .section pre span{
+            font-size: 110%;
+        }
     }
 }
 
@@ -1006,6 +952,7 @@ footer {
     width: 60%;
     } 
     .filter-container{
+        width: 22%;
         padding-left: 0.5rem;
         padding-right: 0.5rem;
 
@@ -1019,7 +966,12 @@ footer {
     }
 
     .filter-checkbox .quote{
-        display: none;
+        /* display: none; */
+        font-size: 80%;
+        align-items: center;
+        height: 11rem;
+        width: 97%;
+        padding: 2.5rem 0rem 2rem 2rem;
     }
 
     .slider .card{
@@ -1027,7 +979,7 @@ footer {
     }
 
     .course-container{
-        width: 80%;
+        width: 78%;
     }
 
     .service-container{
@@ -1085,6 +1037,7 @@ footer {
     }
 
     .form-container .login-popup{
+        height: 70%;
         width: 90%;
         padding: 0.5rem 0rem 1rem 0rem;
         gap: 2rem;
