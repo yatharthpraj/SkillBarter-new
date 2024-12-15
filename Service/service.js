@@ -93,6 +93,7 @@ class CardSlider {
   new CardSlider('#slider1'); // Slider 1
   new CardSlider('#slider2'); // Slider 2
   new CardSlider('#slider3'); // Slider 3
+  new CardSlider('#slider4'); // Slider 4
   new CardSlider('#your-post');
 
 
