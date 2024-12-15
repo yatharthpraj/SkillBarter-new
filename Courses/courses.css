@@ -80,7 +80,6 @@ nav {
         left: 1.4rem;
         display: flex;
         list-style: none;
-        /* gap: 1.563rem; */
         gap: clamp(1rem, 2vw, 2.563rem);
         align-items: center;
 
@@ -126,7 +125,6 @@ nav {
                 text-decoration: none;
                 font-size: 1.3rem;
                 font-weight: 600;
-                /* color: black; */
                 color: white;
 
                 &::after {
@@ -661,6 +659,16 @@ nav .left-items li :hover::after {
         width: 100%;
          
     }
+    
+    .card-heading{
+        p{
+            font-size: 85%;
+        }
+        h4{
+            margin-bottom: 0.7rem;
+            font-size: 100%;
+        }
+    }
     .know-more{
         height: 0%;
         width: 100%;
@@ -675,15 +683,15 @@ nav .left-items li :hover::after {
     }
 
     a {
-        width: 60%;
+        width: 50%;
         /* height: 1.4rem; */
         text-align: center;
         text-decoration: none;
         color: white;
         background-color: var(--bg-color);
         border-radius: 10px;
-        padding: 2px 4px;
-        font-size: 110%;
+        padding: 4px 4px;
+        font-size: 90%;
         font-weight: 500;
 
         &:hover {
@@ -735,7 +743,6 @@ footer {
     top: 13%;
     height: 22.5rem;
     width: 100%;
-    /* background-color: #053d1a; */
     background-image: url(../Assets/FooterWaves.jpeg);
     background-repeat: no-repeat;
     background-size: 100% 99% ;
@@ -790,10 +797,53 @@ footer {
             ul {
                 list-style: none;
 
-                li a {
+                a {
                     text-decoration: none;
+                    color: black;
                     font-size: 120%;
+                    position: relative;
+                    display: inline-block;
+
+                    /* Hover underline animation */
+                    &::after {
+                        content: "";
+                        position: absolute;
+                        left: 0;
+                        bottom: -3px;
+                        width: 0;
+                        height: 2px;
+                        background-color: var(--btn-color);
+                        transition: width 0.3s ease-out;
+                    }
+
+                    &:hover::after {
+                        width: 100%;
+                    }
                 }
+            }
+
+            pre span{
+                    text-decoration: none;
+                    color: black;
+                    font-size: 120%;
+                    position: relative;
+                    display: inline-block;
+
+                    /* Hover underline animation */
+                    &::after {
+                        content: "";
+                        position: absolute;
+                        left: 0;
+                        bottom: -3px;
+                        width: 0;
+                        height: 2px;
+                        background-color: var(--btn-color);
+                        transition: width 0.3s ease-out;
+                    }
+
+                    &:hover::after {
+                        width: 100%;
+                    }
             }
 
             .center {
@@ -878,7 +928,7 @@ footer {
     }
 
     .filter-container{
-        width: 30%;
+        width: 18%;
         padding-right: 1rem;
     }
 
