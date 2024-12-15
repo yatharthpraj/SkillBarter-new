@@ -741,7 +741,7 @@ footer {
                         bottom: -3px;
                         width: 0;
                         height: 2px;
-                        background-color: var(--btn-color);
+                        background-color: var(--bg-color);
                         transition: width 0.5s ease-out;
                     }
 
@@ -766,7 +766,7 @@ footer {
                         bottom: -3px;
                         width: 0;
                         height: 2px;
-                        background-color: var(--btn-color);
+                        background-color: var(--bg-color);
                         transition: width 0.7s ease-out;
                     }
 
@@ -879,13 +879,13 @@ footer {
             font-size: 140%;
         }
         .checkbox{
-            font-size: 105%;
+            font-size: 110%;
             gap: 0.5rem;
         }
 
         .quote{
 
-            font-size: 100%;
+            font-size: 90%;
             align-items: center;
             height: 11rem;
         }
