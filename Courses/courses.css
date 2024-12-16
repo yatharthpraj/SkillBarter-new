@@ -1091,7 +1091,7 @@ footer {
     }
 
     .slider-wrapper .slider{
-        justify-content: center;
+        justify-content: start;
     }
     .slider .card{
         min-width: calc(100%/1.2);
