@@ -1,6 +1,24 @@
 <?php
 session_start(); // Start session to access session variables
+// Set a session timeout limit in seconds
+$session_timeout = 86400; //  1 day
 
+// Check if the session has a "last activity" timestamp
+if (isset($_SESSION['last_activity'])) {
+    // Calculate the session's age
+    $session_age = time() - $_SESSION['last_activity'];
+
+    // If the session is too old, destroy it
+    if ($session_age > $session_timeout) {
+        session_unset(); // Remove all session variables
+        session_destroy(); // Destroy the session
+        header("Location: login.php"); // Redirect to the login page
+        exit();
+    }
+}
+
+// Update the last activity time
+$_SESSION['last_activity'] = time();
 // Database connection settings
 $servername = "localhost";
 $username = "root";
@@ -24,21 +42,41 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $experience = (int)($_POST['experience'] ?? 0);
     $interest = trim($_POST['interest'] ?? '');
     $mode = trim($_POST['mode'] ?? '');
-    $mobile = trim($_POST['mobile'] ?? '');
+    $mobile = (int)($_POST['mobile'] ?? '');
     $description = trim($_POST['description'] ?? '');
     $hashed_password = password_hash($password, PASSWORD_DEFAULT);
-
     // Check if user is logged in and email is available in session
-    if (isset($_SESSION['email'])) {
+    if (isset($_SESSION['email']) && $_POST['submit_skills']== 'Submit') {
         $email = $_SESSION['email']; // Use email from session
+        $stmt = $conn->prepare("SELECT name FROM user_data WHERE email = ?");
+        if (!$stmt) {
+            die("Prepare failed: " . $conn->error);
+        }
 
+
+        $stmt->bind_param("s", $email); // "s" indicates the parameter is a string
+
+        // Execute the statement
+        $stmt->execute();
+        
+        // Get the result
+        $result = $stmt->get_result();
+        
+        // Fetch the name
+        if ($result->num_rows > 0) {
+            while ($row = $result->fetch_assoc()) {
+                $name = $row['name']; // Fetch the name
+                // echo "Name: " . $name;
+            }
+        } else {
+            echo "No user found.";
+        }
         // Update user data
         $stmt = $conn->prepare("
-            UPDATE user_data 
-            SET name = ?, password = ?, skill = ?, experience = ?, interest = ?, mode = ?, mobile = ?, description = ?
-            WHERE email = ?
-        ");
-        $stmt->bind_param("sssisssss", $name, $hashed_password, $skills, $experience, $interest, $mode, $mobile, $description, $email);
+        INSERT INTO user_data (name, skill, experience, interest, mode, mobile, description, email)
+        VALUES (?, ?, ?, ?, ?, ?, ?, ?)
+    ");
+        $stmt->bind_param("ssisssss", $name,  $skills, $experience, $interest, $mode, $mobile, $description, $email);
 
         if ($stmt->execute()) {
             echo "<script>

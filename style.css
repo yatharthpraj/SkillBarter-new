@@ -20,6 +20,9 @@ html {
 body {
     height: 100vh;
     width: 100%;
+    background-color: white;
+    color: black;
+    transition: background-color 0.3s, color 0.3s; /* Smooth transition */
 }
 
 .container {
@@ -49,6 +52,30 @@ body {
         background-clip: text;
     }
 }
+.buttom-top{
+    display: flex;
+    height: 4rem;
+    width: 4rem;
+    border-radius: 50%;
+    background-color: var(--bg-color);
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    z-index: 9;
+    border: 2px solid white;
+    button{
+        cursor: pointer;
+        height: 100%;
+        width: 100%;
+        background-color: inherit;
+        border-radius: 50%;
+        border: none;
+    }
+    &:hover{
+        opacity: 0.9;
+    }
+
+}
 
 nav {
     position: relative;
@@ -59,7 +86,7 @@ nav {
     align-items: center;
     padding: 0px 0.95rem;
     .right-items {
-        display: flex;
+        display: none;
         position: relative;
         margin-left: auto;
         right: 2rem;
@@ -167,14 +194,14 @@ nav .left-items li :hover::after {
 .sidebar {
     display: none;
     color: black;
-    z-index: 1;
+    z-index: 10;
     height: 100vh;
     width: 25%;
     position: fixed;
     top: 0;
     left: 0;
     border-radius: 0 10px 10px 0;
-    background-color: rgba(70, 70, 70, 0.449);
+    background-color: rgba(110, 110, 110, 0.449);
     backdrop-filter: blur(50px);
     box-shadow: 2px 0 1px 0px rgb(219, 219, 219);
     animation: sideBar 0.3s ease-in forwards;
@@ -227,26 +254,7 @@ nav .left-items li :hover::after {
             padding-left: 0.43rem;
             border-radius: 0.313rem;
 
-            input[type='search'] {
-                background-color: inherit;
-                border: 1px solid white;
-                border-radius: 5px;
-                height: 100%;
-                width: 100%;
-
-                &:focus-visible {
-                    color: black;
-                    outline: none;
-                    background-color: white;
-
-                }
-
-                &::placeholder {
-                    font-weight: 400;
-                    color: white;
-                    font-size: 120%;
-                }
-            }
+            
 
             svg {
                 position: relative;
@@ -258,39 +266,62 @@ nav .left-items li :hover::after {
                 cursor: pointer;
                 background-color: rgba(216, 216, 216, 0.282);
             }
-
-            a, button {
-                border: none;
-                background: transparent;
+            
+             form{
+                width: 100%;
+            }
+            a,button {
+                text-align: start;
                 text-decoration: none;
                 font-size: 120%;
                 color: white;
+                background-color: transparent;
                 width: 100%;
                 font-weight: 500;
-
+                border: none;
+                cursor: pointer;
                 /* margin-left: 35px; */
 
-                select {
-                    background-color: inherit;
-                    cursor: pointer;
-                    border: none;
-                    width: 100%;
+                
+            }
+            select {
+                background-color: inherit;
+                cursor: pointer;
+                border: none;
+                width: 100%;
+                font-size: 120%;
+                font-weight: 500;
+                height: 1.875rem;
+                color: white;
+                border-radius: 0.313rem;
+
+                option {
                     font-size: 100%;
-                    font-weight: 500;
-                    height: 1.875rem;
-                    color: white;
+                    background-color: rgba(255, 255, 255, 0.974);
+                backdrop-filter: blur(20px);
+                    color: black;
 
-                    option {
-                        background-color: #0000001d;
-                        backdrop-filter: blur(20px);
-                        color: black;
-
-                        a {
-                            text-decoration: none;
-                            color: black;
-                        }
-                    }
+                    
                 }
+            }
+
+
+            &:last-child{
+             /* button{
+                background-color: #ff4d4d;
+                 color: red;
+                font-weight: 600;
+
+             }
+             transition: 200ms ease; */
+             &:hover{
+                background-color: #ff000054;
+                button,svg,path{
+                    color: white;
+                    fill:white;
+                }
+             }
+             
             }
         }
     }
@@ -298,9 +329,8 @@ nav .left-items li :hover::after {
     .sidebar-anchor {
         margin-top: 2rem;
         justify-content: flex-end;
-        position: absolute;
-        z-index: inherit;
-
+        position: relative;
+        bottom: 0rem;
         p{
             color: white;
         }
@@ -324,36 +354,42 @@ nav .left-items li :hover::after {
     }
 }
 
-@keyframes close-sidebar {
-    from {
-        transform: translateX(0%);
-    }
+.overlay{
+    display: none;
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9;
+    background-color: rgba(0, 0, 0, 0.11);  
+    backdrop-filter: blur(1px); 
 
-    to {
-        transform: translateX(-100%);
-    }
-}
-
+}  
+  
 .form-container {
     height: 100%;
     width: 100%;
     display: none;
+    /* display: flex; */
     justify-content: center;
     align-items: center;
     flex-direction: column;
     background-color: #0000004e;
-    z-index: 1;
+    z-index: 10;
     position: fixed;
     backdrop-filter: blur(5px);
 
     .login-popup {
         display: flex;
         flex-direction: column;
-        background-color: white;
+        /* background-color: white; */
+        background: linear-gradient(135deg, #ffffff, #f7f7f7);
+
         position: fixed;
         gap: 1rem;
-        padding: 3.5rem;
-        z-index: 1;
+        padding: 2.5rem;
+        /* z-index: 101; */
         height: 80%;
         width: 40%;
         border-radius: 15px;
@@ -362,14 +398,19 @@ nav .left-items li :hover::after {
         overflow: hidden;
 
 
-        .form{
+        .form {
             display: flex;
             flex-direction: column;
             align-items: center;
             padding: 0rem 2rem;
-            center{
-                margin-bottom: 30px;
-            }
+        }
+        h2{
+            font-size: 1.6rem;
+            text-align: start;
+            font-family: "Roboto", serif;
+            font-weight: 500;
+            font-style: normal;
+            margin-bottom: 1.5rem;
         }
 
 
@@ -385,59 +426,78 @@ nav .left-items li :hover::after {
             color: blue;
             cursor: pointer;
             text-align: left;
+
             &:hover {
                 opacity: 0.7;
             }
 
         }
+        #show-password-label {
+            display: flex;
+            color: black;
+            margin-left: 3px;
+            font-weight: 500;
+            font-size: 100%;
+            /* text-align: start; */
+            align-items: center;
+            width: 100%;
+            justify-content: start;
+            gap: 5px;
+            #show-password {
+                margin: 1rem 0;
+                width: fit-content;
+                height: fit-content;
+                font-size: 90%;
+                accent-color: var(--btn-color);
+            }
 
+        }
         input {
             font-size: 100%;
             font-weight: 500;
             line-height: 1.4;
             width: 100%;
+            height: 2rem;
             margin: 0.9rem 0;
 
-            /* border: none; */
+            /* box-shadow: inset 0 0px 3px rgba(0, 0, 0, 0.1); */
+            border: 1px solid #ddd;
+
+            /* background-color: rgb(247, 247, 247); */
+            border-radius: 4px;
+            padding: 0.2rem;
             &::placeholder {
-                color: grey;
+                color: rgb(135, 135, 135);
             }
 
             &:focus {
-                color: black;
+                border-color: var(--btn-color);
+                outline: none;
             }
         }
 
-        label {
-            display: flex;
-            color: black;
-            margin-left: 3px;
-            font-weight: 500;
-            font-size: 120%;
-            /* text-align: start; */
-
-
-        }
+       
 
         form button {
             /* margin: 4px; */
             font-weight: 600;
             font-size: 120%;
-            width: 60%;
+            width: 100%;
             height: 35px;
             /* padding-left: 10%; */
             /* margin-left: 29%; */
             margin-top: 20px;
             margin-bottom: 10px;
             border: none;
-            background-color: rgb(111, 202, 227);
+            /* background-color: rgb(111, 202, 227); */
+            background-color: var(--btn-color);
             color: black;
-            border-radius: 10px;
-            /* opacity: 0.8; */
+            border-radius: 50px;
             cursor: pointer;
-
+            
             &:hover {
-                background-color: rgb(47, 188, 227);
+                /* background-color: rgb(47, 188, 227); */
+                opacity: 0.8;
 
                 /* transform: scale(1.03); */
             }
@@ -532,7 +592,7 @@ nav .left-items li :hover::after {
             height: 100%;
             width: 43%;
             padding: 3rem 2rem 0rem 2rem;
-            gap: 1rem;
+            gap: 0.2rem;
 
             .hero-heading {
                 width: 100%;
@@ -544,7 +604,7 @@ nav .left-items li :hover::after {
 
             .hero-para {
                 margin: 1rem 0;
-                font-size: 1.1rem;
+                font-size: 0.8rem;
             }
 
             a {
@@ -566,7 +626,7 @@ nav .left-items li :hover::after {
     align-items: center;
     min-height: 100%;
     width: 100%;
-    padding: 6rem 5rem 2rem 3rem;
+    padding: 3rem 5rem 5rem 3rem;
 
     .head-des {
         display: flex;
@@ -822,8 +882,10 @@ nav .left-items li :hover::after {
     border-radius: 50px;
     cursor: pointer;
     background-color: #F7AD19;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.2s ease;
     text-decoration: none;
+    border: 1px solid #F7AD19;
+
 }
 
 .view-course-btn:hover {
@@ -868,7 +930,7 @@ nav .left-items li :hover::after {
 
             img {
                 height: 90%;
-                width: 85%;
+                width: 100%;
             }
 
             h3 {
@@ -884,19 +946,18 @@ nav .left-items li :hover::after {
 footer {
     position: relative;
     top: 13%;
-    min-height: 50%;
+    height: 22.5rem;
     width: 100%;
-    /* background-color: #053d1a; */
     background-image: url(./Assets/FooterWaves.jpeg);
     background-repeat: no-repeat;
     background-size: 100% 99% ;
     background-position: bottom;
-
+    padding-bottom: 7rem;
     .footer-container {
-        height: 100%;
+        padding-top: 3rem;
+        min-height: 100%;
         width: 100%;
         display: flex;
-        align-items: center;
         justify-content: space-around;
 
         * {
@@ -941,10 +1002,39 @@ footer {
             ul {
                 list-style: none;
 
-                li a {
+                a {
                     text-decoration: none;
+                    color: black;
                     font-size: 120%;
+                    position: relative;
+                    display: inline-block;
+
+                    /* Hover underline animation */
+                    &::after {
+                        content: "";
+                        position: absolute;
+                        left: 0;
+                        bottom: -3px;
+                        width: 0;
+                        height: 2px;
+                        background-color: var(--bg-color);
+                        transition: width 0.5s ease-out;
+                    }
+
+                    &:hover::after {
+                        width: 100%;
+                    }
                 }
+            }
+
+            pre span{
+                    text-decoration: none;
+                    color: black;
+                    font-size: 100%;
+                    position: relative;
+                    display: inline-block;
+
+                   
             }
 
             .center {
@@ -955,7 +1045,7 @@ footer {
                 span {
                     font-family: "Satisfy", cursive;
                     color: transparent;
-                    background: linear-gradient(to top left, #ffb703, #6fcae3);
+                    /* background: linear-gradient(to top left, #ffb703, #6fcae3); */
                     background-clip: text;
                 }
 
@@ -965,3 +1055,4 @@ footer {
 
     }
 }
+

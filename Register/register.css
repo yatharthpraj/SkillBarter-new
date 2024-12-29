@@ -13,13 +13,16 @@ body {
     width: 100vw;
     background-image:linear-gradient(to top right,#3effd4,#00b4ff,#3262ff); /* Blue background */
 }
-
+:root {
+    --bg-color: #053d1a;
+    --btn-color: #f7ad19;
+}
 .container {
     display: flex;
     background-color: #ffffff;
     border-radius: 10px;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-    overflow-y: scroll;
+    overflow-y: auto;
     width: 900px;
     max-width: 100%;
     margin: 30px;
@@ -36,11 +39,28 @@ body {
 
 form{
     padding-bottom: 2px;
+
+    .create-post-btn{
+        background-color: transparent;
+        color: blue;
+        border: none;
+        text-decoration: underline;
+        cursor: pointer;
+        margin-bottom: 1rem;
+    }
+    .close-post-btn{
+        background-color: transparent;
+        color: blue;
+        border: none;
+        text-decoration: underline;
+        cursor: pointer;
+        margin-bottom: 1rem;
+    }
 }
 
-.form-section h2 {
-    font-size: 24px;
-    margin-bottom: 10px;
+.form-section h1 {
+    /* font-size: 24px; */
+    margin-bottom: 1.7rem;
     color: #333;
 }
 .form-section p  {
@@ -75,10 +95,19 @@ form{
 }
 
 .form-group label {
-    display: block;
+    display: flex;
     font-size: 14px;
     margin-bottom: 5px;
     color: #555;
+    align-items: center;
+    gap: 5px;
+    #show-password {
+        margin: 1rem 0;
+        width: fit-content;
+        height: fit-content;
+        font-size: 90%;
+        accent-color: var(--btn-color);
+    }
 }
 
 .form-group input, .form-group select,.form-group textarea {
